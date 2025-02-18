@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Profissional</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">Henrique Luiz Dutra</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Transformando suas ideias em realidade!</h1>
+                <p>Cursando Engenheiro de Software na Escola DNC apaixonado por criar experiências digitais únicas e envolventes.</p>
+                <a href="#contato" class="cta-button">Entre em Contato</a>
+            </div>
+        </section>
+
+        <section id="servicos" class="services">
+            <div class="container">
+                <h2 class="section-title">Meus Serviços</h2>
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Design de Sites</h3>
+                        <p>Desenvolvo sites responsivos e intuitivos, otimizados para conversão e desempenho.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Branding Digital</h3>
+                        <p>Ajudo a construir uma presença online forte e consistente para a sua marca.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Otimização UX/UI</h3>
+                        <p>Melhoro a experiência do usuário com design focado nas necessidades do seu público.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2 class="section-title">Meus Projetos</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item animate-on-scroll">
+                        <img src="img/1_Assembleia-de-Deus-Ministerio-de-Santos.png" alt="Projeto 1">
+                        <div class="portfolio-overlay">
+                            <h3>Projeto 1</h3>
+                            <p>Assembleia de Deus Ministério de Santos</p>
+                            <a href="https://assembleia-de-deus-santo-bl17zlt.gamma.site/" target="_blank" class="btn-view">Ver Projeto</a>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item animate-on-scroll">
+                        <img src="img/1_Construindo-um-Portfolio-Profissional-com-React.png" alt="Projeto 2">
+                        <div class="portfolio-overlay">
+                            <h3>Projeto 2</h3>
+                            <p>Construindo um Portfólio Profissional com React</p>
+                            <a href="https://gamma.app/docs/vyqycnxa6ht379t" target="_blank" class="btn-view">Ver Projeto</a>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item animate-on-scroll">
+                        <img src="img/Cha-de-Casa-Nova-Lauane-and-Eduardo-Estao-Prontos.png" alt="Projeto 3">
+                        <div class="portfolio-overlay">
+                            <h3>Projeto 3</h3>
+                            <p>Chá de Casa Nova: Lauane & Eduardo</p>
+                            <a href="https://cha-de-casa-nova-xf6taja.gamma.site/chadecasanovalauaneeduardo" target="_blank" class="btn-view">Ver Projeto</a>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p><a href="mailto:henriqueluizd91@gmail.com">henriqueluizd91@gmail.com
+                            </a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <h3>WhatsApp</h3>
+                            <p><a href="https://wa.me/5511999999999" target="_blank">(11) 918266394</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://linkedin.com/in/henrique-luiz-dutra-a10346146/" target="_blank">linkedin.com/in/seu-perfil</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <h3>GitHub</h3>
+                            <p><a href="https://github.com/Ricklima991" target="_blank">github.com/Ricklima991</a></p>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" action="https://formspree.io/f/seu-form-id" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/seu-perfil" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/seu-usuario" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://instagram.com/seu-usuario" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://behance.net/seu-usuario" target="_blank" title="Behance">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 Henrique Luiz Dutra. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
