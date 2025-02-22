@@ -6,7 +6,46 @@
     --light-bg: #f8fafc;
     --white: #ffffff;
     --button-gradient: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    --code-font: 'Fira Code', monospace;  /* Nova variável para fonte */
+.notebook-frame {
+    position: relative;
+    padding: 20px;
+    background: #363636;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.notebook {
+    position: relative;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.notebook-screen {
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.notebook-screen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.notebook::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15%;
+    height: 8px;
+    background: #4A0404;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}    --code-font: 'Fira Code', monospace;  /* Nova variável para fonte */
 }
 
 * {
