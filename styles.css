@@ -1,0 +1,52 @@
+/* 
+ * Global Styles
+ * Description: Base styles and reset for the entire application
+ * Author: [Your Name]
+ * Date: [Current Date]
+ */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+ * Typography 
+ * Consistent text styling across the site
+ */
+h1, h2, h3 {
+    color: #333; /* Dark gray for headings */
+    font-weight: bold;
+}
+
+/* 
+ * Layout Utilities
+ * Flexbox and grid helper classes
+ */
+.container {
+    max-width: 1200px; /* Maximum content width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Responsive side padding */
+}
+
+/* 
+ * Color Palette 
+ * Consistent color scheme for the design
+ */
+:root {
+    --primary-color: #3498db; /* Bright blue */
+    --secondary-color: #2ecc71; /* Green */
+    --text-color: #333; /* Dark gray text */
+}
+
+/* 
+ * Responsive Design 
+ * Media queries for different screen sizes
+ */
+@media (max-width: 768px) {
+    /* Mobile-specific styles */
+    .container {
+        padding: 0 10px;
+    }
+}
