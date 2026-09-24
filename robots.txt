@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ricklima991.github.io/profissional-rickdutra/sitemap.xml
