@@ -1346,8 +1346,9 @@ h1, h2, h3, .logo { font-family: var(--head-font); letter-spacing: -.02em; }
 .portfolio-item.featured { border: 2px solid transparent; background: linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg,#4F46E5,#06B6D4) border-box; }
 .proj-cover {
     height: 240px; display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
+    position: relative; overflow: hidden; background: #0F172A;
 }
+.proj-cover img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
 .proj-cover.nepofit { background: radial-gradient(circle at 80% 10%, rgba(200,255,0,.35), transparent 55%), linear-gradient(140deg, #0B0D10, #1A2200 70%, #2A3800); }
 .proj-cover.pousada { background: radial-gradient(circle at 15% 20%, rgba(255,200,120,.4), transparent 55%), linear-gradient(140deg, #0C2E3E, #14505E 60%, #1B7A7A); }
 .proj-logo { font-family: var(--head-font); font-weight: 800; font-size: 1.7rem; letter-spacing: .04em; color: #fff; text-align: center; line-height: 1.2; padding: 0 1rem; }
