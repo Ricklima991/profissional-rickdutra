@@ -26,11 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate');
+                entry.target.classList.add('in');
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+    document.querySelectorAll('.animate-on-scroll, .reveal').forEach((element) => {
         observer.observe(element);
     });
 }); 

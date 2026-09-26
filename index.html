@@ -1,296 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Meta tags para SEO e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henrique Luiz Dutra — Desenvolvedor Front-End | Portfólio</title>
-    <meta name="description" content="Portfólio de Henrique Luiz Dutra, estudante de Engenharia de Software (DNC). Sites, landing pages e interfaces modernas: Nepofit Performance, Pousada do Adão, CrescerBem e mais.">
+    <title>Henrique Luiz Dutra — Web Designer & Front-End | Portfólio</title>
+    <meta name="description" content="Henrique Luiz Dutra, estudante de Engenharia de Software (DNC) se especializando em web design: fanpages que convertem até sites ultraprofissionais. Veja meus projetos.">
     <meta name="author" content="Henrique Luiz Dutra">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0F172A">
+    <meta name="theme-color" content="#0B0B10">
     <link rel="canonical" href="https://ricklima991.github.io/profissional-rickdutra/">
-    <!-- Open Graph / WhatsApp / LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:title" content="Henrique Luiz Dutra — Desenvolvedor Front-End">
-    <meta property="og:description" content="Crio landing pages e sites modernos, rápidos e responsivos. Veja meus projetos: Nepofit Performance, Pousada do Adão, CrescerBem.">
+    <meta property="og:title" content="Henrique Luiz Dutra — Web Designer & Front-End">
+    <meta property="og:description" content="Fanpages que convertem até sites ultraprofissionais. Estudante de Engenharia de Software, especialista em HTML, CSS e JavaScript.">
     <meta property="og:url" content="https://ricklima991.github.io/profissional-rickdutra/">
     <meta property="og:image" content="https://ricklima991.github.io/profissional-rickdutra/img/nepofit-performance.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Henrique Luiz Dutra — Desenvolvedor Front-End">
-    <meta name="twitter:description" content="Landing pages e sites modernos, rápidos e responsivos. Orçamento grátis no WhatsApp.">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Person","name":"Henrique Luiz Dutra","jobTitle":"Desenvolvedor Front-End","url":"https://ricklima991.github.io/profissional-rickdutra/","sameAs":["https://github.com/Ricklima991","https://linkedin.com/in/henrique-luiz-dutra-a10346146"],"knowsAbout":["HTML","CSS","JavaScript","Landing Pages","GitHub Pages"]}
+    {"@context":"https://schema.org","@type":"Person","name":"Henrique Luiz Dutra","jobTitle":"Web Designer e Desenvolvedor Front-End","url":"https://ricklima991.github.io/profissional-rickdutra/","sameAs":["https://github.com/Ricklima991","https://linkedin.com/in/henrique-luiz-dutra-a10346146"],"knowsAbout":["HTML","CSS","JavaScript","Web Design","Landing Pages"]}
     </script>
 
-    <!-- Arquivos CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    
-    <!-- Font Awesome e Google Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cabeçalho com navegação -->
+    <!-- NAV -->
     <header class="header">
         <nav class="nav-container">
-            <!-- Logo -->
-            <div class="logo">Henrique Luiz Dutra</div>
-            
-            <!-- Menu de navegação principal -->
+            <a class="logo" href="#inicio"><span class="monogram">HD</span></a>
             <ul class="nav-menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#trabalhos">Trabalhos</a></li>
+                <li><a href="#capacidades">Capacidades</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            
-            <!-- Botão menu mobile -->
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
+            <div class="nav-right">
+                <a href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20or%C3%A7amento." target="_blank" class="talk-btn">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Seção Hero/Banner -->
+        <!-- HERO -->
         <section id="inicio" class="hero">
-            <div class="hero-content">
-                <span class="hero-badge"><i class="fas fa-circle"></i> Disponível para projetos freelance</span>
-                <h1>Transformando ideias em sites que convertem</h1>
-                <p>Sou <strong>Henrique Luiz Dutra</strong>, estudante de Engenharia de Software na Escola DNC. Crio landing pages e sites modernos, rápidos e responsivos — do design ao deploy.</p>
-                <div class="hero-actions">
-                    <a href="#portfolio" class="cta-button">Ver projetos</a>
-                    <a href="#contato" class="cta-button ghost">Entre em contato</a>
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <span class="eyebrow">Experiências digitais que inspiram</span>
+                    <h1>WEB<br>DESIGNER</h1>
+                    <p class="hero-sub">Crio fanpages que convertem e sites ultraprofissionais — do layout ao código, com HTML, CSS e JavaScript.</p>
+                    <div class="hero-actions">
+                        <a href="#trabalhos" class="btn-light">Ver meu trabalho <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://github.com/Ricklima991/curr-culo" target="_blank" class="btn-line"><i class="fa-solid fa-download"></i> Ver currículo</a>
+                    </div>
                 </div>
-                <div class="hero-stats">
-                    <div><strong>8+</strong><span>projetos publicados</span></div>
-                    <div><strong>100%</strong><span>responsivo</span></div>
-                    <div><strong>SEO</strong><span>otimizado</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Serviços -->
-        <section id="servicos" class="services">
-            <div class="container">
-                <h2 class="section-title">Meus Serviços</h2>
-                <div class="services-grid">
-                    <!-- Cards de serviços -->
-                    <div class="service-card animate-on-scroll">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Design de Sites</h3>
-                        <p>Desenvolvo sites responsivos e intuitivos, otimizados para conversão e desempenho.</p>
+                <div class="hero-right">
+                    <!-- Janela de código: o que eu programo -->
+                    <div class="code-window animate-on-scroll">
+                        <div class="code-bar"><span></span><span></span><span></span><em>meu-codigo.html</em></div>
+<pre><code><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"site-dos-sonhos"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>Seu negócio no ar<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;button&gt;</span>Quero o meu<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/section&gt;</span></code></pre>
                     </div>
-                    <div class="service-card animate-on-scroll">
-                        <i class="fas fa-paint-brush"></i>
-                        <h3>Branding Digital</h3>
-                        <p>Ajudo a construir uma presença online forte e consistente para a sua marca.</p>
+                    <!-- Painel GitHub -->
+                    <div class="gh-panel animate-on-scroll">
+                        <div class="gh-head"><i class="fab fa-github"></i> github.com/Ricklima991</div>
+                        <div class="lang-bar">
+                            <span class="html" style="width:48%"></span><span class="css" style="width:32%"></span><span class="js" style="width:20%"></span>
+                        </div>
+                        <div class="lang-legend">
+                            <span><i class="html"></i>HTML</span>
+                            <span><i class="css"></i>CSS</span>
+                            <span><i class="js"></i>JavaScript</span>
+                        </div>
+                        <small>15+ repositórios · foco total em front-end</small>
                     </div>
-                    <div class="service-card animate-on-scroll">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h3>Otimização UX/UI</h3>
-                        <p>Melhoro a experiência do usuário com design focado nas necessidades do seu público.</p>
-                    </div>
+                    <span class="avail">Disponível para<br><strong>freelance</strong><a href="#contato">Projetos ↑</a></span>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de Portfólio -->
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <h2 class="section-title">Meus Projetos</h2>
-                <p class="section-subtitle">Uma seleção de trabalhos recentes — landing pages e sites completos, do layout ao deploy.</p>
-                <div class="portfolio-grid">
-                    <!-- Destaque: Nepofit Performance -->
-                    <div class="portfolio-item featured animate-on-scroll">
-                        <div class="proj-cover">
-                            <img src="img/nepofit-performance.png" alt="Nepofit Performance - site da academia">
-                            <span class="proj-tag-live">Destaque</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h3>Nepofit Performance</h3>
-                            <p>Landing page de alta conversão para academia em Rio Grande da Serra: planos, modalidades, depoimentos e agendamento via WhatsApp.</p>
-                            <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
-                            <div class="proj-actions">
-                                <a href="https://ricklima991.github.io/nepofit-performance/" target="_blank" class="btn-view">Ver Projeto</a>
-                                <a href="https://github.com/Ricklima991/nepofit-performance" target="_blank" class="btn-view github"><i class="fab fa-github"></i> Código</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Destaque: Pousada do Adão -->
-                    <div class="portfolio-item featured animate-on-scroll">
-                        <div class="proj-cover">
-                            <img src="img/pousada-do-adao.png" alt="Pousada do Adão - site da pousada e restaurante">
-                            <span class="proj-tag-live">Destaque</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h3>Pousada do Adão</h3>
-                            <p>Site completo para pousada e restaurante: suítes, cardápio, galeria, depoimentos e reservas integradas ao WhatsApp.</p>
-                            <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
-                            <div class="proj-actions">
-                                <a href="https://ricklima991.github.io/pousada-do-adao/" target="_blank" class="btn-view">Ver Projeto</a>
-                                <a href="https://github.com/Ricklima991/pousada-do-adao" target="_blank" class="btn-view github"><i class="fab fa-github"></i> Código</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- CrescerBem -->
-                    <div class="portfolio-item featured animate-on-scroll">
-                        <img src="img/CrescerBem.png" alt="CrescerBem - Desenvolvimento Infantil">
-                        <div class="portfolio-overlay">
-                            <h3>CrescerBem</h3>
-                            <p>Plataforma de desenvolvimento infantil: guias por idade, alimentação, rotina e consulta com especialistas.</p>
-                            <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
-                            <div class="proj-actions">
-                                <a href="https://ricklima991.github.io/CrescerBem/" target="_blank" class="btn-view">Ver Projeto</a>
-                                <a href="https://github.com/Ricklima991/CrescerBem" target="_blank" class="btn-view github"><i class="fab fa-github"></i> Código</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Aakriti Architects -->
-                    <div class="portfolio-item featured animate-on-scroll">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Aakriti Architects - landing page dark luxo para arquitetura">
-                        <div class="portfolio-overlay">
-                            <h3>Aakriti Architects</h3>
-                            <p>Reconstrução fiel de referência dark/luxo: hero gigante, about, 6 serviços, projetos, featured, depoimentos e CTA.</p>
-                            <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
-                            <div class="proj-actions">
-                                <a href="https://ricklima991.github.io/aakriti-architects-landing/" target="_blank" class="btn-view">Ver Projeto</a>
-                                <a href="https://github.com/Ricklima991/aakriti-architects-landing" target="_blank" class="btn-view github"><i class="fab fa-github"></i> Código</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Projeto 1 -->
-                    <div class="portfolio-item featured animate-on-scroll">
-                        <img src="img/1_Assembleia-de-Deus-Ministerio-de-Santos.png" alt="Projeto 1">
-                        <div class="portfolio-overlay">
-                            <h3>Projeto 1</h3>
-                            <p>Assembleia de Deus Ministério de Santos</p>
-                            <div class="proj-tags"><span>Gamma</span><span>No-code</span></div>
-                            <a href="https://assembleia-de-deus-santo-bl17zlt.gamma.site/" target="_blank" class="btn-view">Ver Projeto</a>
-                        </div>
-                    </div>
-                    <!-- Projeto 2 -->
-                    <div class="portfolio-item featured animate-on-scroll">
-                        <img src="img/1_Construindo-um-Portfolio-Profissional-com-React.png" alt="Projeto 2">
-                        <div class="portfolio-overlay">
-                            <h3>Projeto 2</h3>
-                            <p>Construindo um Portfólio Profissional com React</p>
-                            <div class="proj-tags"><span>Gamma</span><span>No-code</span></div>
-                            <a href="https://gamma.app/docs/vyqycnxa6ht379t" target="_blank" class="btn-view">Ver Projeto</a>
-                        </div>
-                    </div>
-                    <!-- Projeto 3 -->
-                    <div class="portfolio-item featured animate-on-scroll">
-                        <img src="img/Cha-de-Casa-Nova-Lauane-and-Eduardo-Estao-Prontos.png" alt="Projeto 3">
-                        <div class="portfolio-overlay">
-                            <h3>Projeto 3</h3>
-                            <p>Chá de Casa Nova: Lauane & Eduardo</p>
-                            <div class="proj-tags"><span>Gamma</span><span>No-code</span></div>
-                            <a href="https://cha-de-casa-nova-xf6taja.gamma.site/chadecasanovalauaneeduardo" target="_blank" class="btn-view">Ver Projeto</a>
-                        </div>
-                    </div>
-                    <!-- Projeto 4 -->
-                    <div class="portfolio-item featured animate-on-scroll">
-                        <img src="img/DncWeather.png" alt="Projeto 4">
-                        <div class="portfolio-overlay">
-                            <h3>Projeto 4</h3>
-                            <p>Descubra Mais com Precisão: Previsões do Tempo e endereços em tempo real.</p>
-                            <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
-                            <a href="https://ricklima991.github.io/Desafio-2-Dnc-consumo-de-API/" target="_blank" class="btn-view">Ver Projeto</a>
-                        </div>
-                    </div>
+        <!-- STATS -->
+        <section class="stats reveal">
+            <div><i class="fa-solid fa-graduation-cap"></i><strong>2+</strong><span>Anos estudando código</span></div>
+            <div><i class="fa-solid fa-rocket"></i><strong>8+</strong><span>Sites publicados</span></div>
+            <div><i class="fa-solid fa-code"></i><strong>5+</strong><span>Tecnologias no toolkit</span></div>
+            <div><i class="fa-solid fa-mobile-screen"></i><strong>100%</strong><span>Layouts responsivos</span></div>
+        </section>
+
+        <!-- DESTAQUES -->
+        <section id="trabalhos" class="work">
+            <div class="section-head">
+                <span class="eyebrow">Trabalhos em destaque</span>
+                <a href="#todos" class="explore">Explorar todos os projetos <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="work-grid">
+                <article class="work-card animate-on-scroll">
+                    <img src="img/nepofit-performance.png" alt="Nepofit Performance - landing page de academia">
+                    <div class="work-info"><h3>Nepofit Performance</h3><small>Landing page · Academia</small></div>
+                    <a class="work-go" href="https://ricklima991.github.io/nepofit-performance/" target="_blank" aria-label="Abrir Nepofit Performance"><i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article class="work-card animate-on-scroll">
+                    <img src="img/pousada-do-adao.png" alt="Pousada do Adão - site de pousada e restaurante">
+                    <div class="work-info"><h3>Pousada do Adão</h3><small>Site completo · Reservas</small></div>
+                    <a class="work-go" href="https://ricklima991.github.io/pousada-do-adao/" target="_blank" aria-label="Abrir Pousada do Adão"><i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article class="work-card animate-on-scroll">
+                    <img src="img/CrescerBem.png" alt="CrescerBem - plataforma de desenvolvimento infantil">
+                    <div class="work-info"><h3>CrescerBem</h3><small>Plataforma · Infantil</small></div>
+                    <a class="work-go" href="https://ricklima991.github.io/CrescerBem/" target="_blank" aria-label="Abrir CrescerBem"><i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </section>
+
+        <!-- SOBRE + CAPACIDADES -->
+        <section id="sobre" class="about-strip reveal">
+            <span class="eyebrow">Sobre mim</span>
+            <h2>Rumo à engenharia de software, especialista em web design.</h2>
+            <p>Sou estudante de <strong>Engenharia de Software na DNC</strong> e estou me especializando em <strong>web design</strong>: de fanpages rápidas que vendem até sites ultraprofissionais com código limpo, responsivo e otimizado. Cada projeto do meu GitHub é um degrau nessa jornada.</p>
+        </section>
+
+        <section id="capacidades" class="caps">
+            <div class="caps-left">
+                <span class="eyebrow">Capacidades principais</span>
+                <div class="cap-grid">
+                    <div class="cap animate-on-scroll"><i class="fa-solid fa-bullhorn"></i><h3>Fanpages que convertem</h3><p>Páginas diretas e persuasivas para campanhas e lançamentos.</p></div>
+                    <div class="cap animate-on-scroll"><i class="fa-solid fa-building"></i><h3>Sites institucionais</h3><p>Sites completos que passam credibilidade e geram contato.</p></div>
+                    <div class="cap animate-on-scroll"><i class="fa-solid fa-pen-ruler"></i><h3>UX/UI Design</h3><p>Layouts bonitos e fáceis de usar em qualquer tela.</p></div>
+                    <div class="cap animate-on-scroll"><i class="fa-solid fa-mobile-screen-button"></i><h3>Responsivo total</h3><p>Perfeito no celular, tablet e computador.</p></div>
+                    <div class="cap animate-on-scroll"><i class="fa-solid fa-gauge-high"></i><h3>SEO & performance</h3><p>Código otimizado para o Google achar e carregar rápido.</p></div>
+                    <div class="cap animate-on-scroll"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Atualização de sites</h3><p>Modernizo sites antigos e dou manutenção.</p></div>
+                </div>
+            </div>
+            <div class="caps-right">
+                <span class="eyebrow">Ferramentas & tecnologias</span>
+                <div class="tools animate-on-scroll">
+                    <span><i class="fa-brands fa-html5"></i>HTML</span>
+                    <span><i class="fa-brands fa-css3-alt"></i>CSS</span>
+                    <span><i class="fa-brands fa-js"></i>JavaScript</span>
+                    <span><i class="fa-brands fa-react"></i>React <em>estudando</em></span>
+                    <span><i class="fa-brands fa-git-alt"></i>Git</span>
+                    <span><i class="fab fa-github"></i>GitHub</span>
+                    <span><i class="fa-solid fa-code"></i>VS Code</span>
+                    <span><i class="fa-solid fa-cloud"></i>Vercel</span>
+                </div>
+                <span class="eyebrow" style="margin-top:26px">Formação</span>
+                <div class="edu animate-on-scroll">
+                    <div><i class="fa-solid fa-graduation-cap"></i><div><strong>Engenharia de Software</strong><small>Escola DNC · cursando</small></div></div>
+                    <div><i class="fa-solid fa-laptop-code"></i><div><strong>Trilha Full Stack</strong><small>Projetos práticos no GitHub</small></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de Contato -->
-        <section id="contato" class="contact">
-            <div class="container">
-                <h2 class="section-title">Entre em Contato</h2>
-                <div class="contact-container">
-                    <!-- Informações de contato -->
-                    <div class="contact-info">
-                        <!-- Email -->
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <h3>Email</h3>
-                            <p><a href="mailto:henriqueluizd91@gmail.com">henriqueluizd91@gmail.com</a></p>
-                        </div>
-                        <!-- WhatsApp -->
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <h3>WhatsApp</h3>
-                            <p><a href="https://wa.me/5511989426415" target="_blank">(11) 98942-6415</a></p>
-                        </div>
-                        <!-- LinkedIn -->
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <h3>LinkedIn</h3>
-                            <p><a href="https://linkedin.com/in/henrique-luiz-dutra-a10346146/" target="_blank">linkedin.com/in/henrique-luiz-dutra</a></p>
-                        </div>
-                        <!-- GitHub -->
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <h3>GitHub</h3>
-                            <p><a href="https://github.com/Ricklima991" target="_blank">github.com/Ricklima991</a></p>
-                        </div>
-                    </div>
-                    
-                    <!-- Formulário de contato -->
-                    <form class="contact-form" action="https://formspree.io/f/seu-form-id" method="POST">
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Assunto</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
-                    </form>
-                </div>
+        <!-- PROCESSO -->
+        <section class="process reveal">
+            <span class="eyebrow">Meu processo</span>
+            <div class="steps">
+                <div><strong>01</strong><h4>Descoberta</h4><p>Entendo seu negócio e seu cliente.</p></div>
+                <div><strong>02</strong><h4>Escopo</h4><p>Defino páginas, prazo e valor fechado.</p></div>
+                <div><strong>03</strong><h4>Design</h4><p>Crio o layout com a sua cara.</p></div>
+                <div><strong>04</strong><h4>Código</h4><p>Transformo o design em site de verdade.</p></div>
+                <div><strong>05</strong><h4>Entrega</h4><p>Publico, testo e te entrego no ar.</p></div>
+            </div>
+        </section>
+
+        <!-- TODOS OS PROJETOS -->
+        <section id="todos" class="all reveal">
+            <span class="eyebrow">Portfólio completo</span>
+            <h2>Todos os projetos</h2>
+            <div class="all-grid">
+                <a href="https://ricklima991.github.io/Landing-Page-Arquitetura/" target="_blank"><img src="img/residencial-tradicao.jpg" alt="Residencial Tradição"><span>Residencial Tradição <em>HTML · CSS · JS</em></span></a>
+                <a href="https://ricklima991.github.io/Desafio-2-Dnc-consumo-de-API/" target="_blank"><img src="img/DncWeather.png" alt="DncWeather"><span>DncWeather · Projeto 4 <em>HTML · CSS · JS</em></span></a>
+                <a href="https://assembleia-de-deus-santo-bl17zlt.gamma.site/" target="_blank"><img src="img/1_Assembleia-de-Deus-Ministerio-de-Santos.png" alt="Assembleia de Deus"><span>Assembleia de Deus <em>Gamma</em></span></a>
+                <a href="https://gamma.app/docs/vyqycnxa6ht379t" target="_blank"><img src="img/1_Construindo-um-Portfolio-Profissional-com-React.png" alt="Portfólio React"><span>Portfólio React <em>Gamma</em></span></a>
+                <a href="https://cha-de-casa-nova-xf6taja.gamma.site/chadecasanovalauaneeduardo" target="_blank"><img src="img/Cha-de-Casa-Nova-Lauane-and-Eduardo-Estao-Prontos.png" alt="Chá de Casa Nova"><span>Chá de Casa Nova <em>Gamma</em></span></a>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="contato" class="cta reveal">
+            <div class="cta-left">
+                <h2>VAMOS CRIAR ALGO<br>EXTRAORDINÁRIO</h2>
+            </div>
+            <div class="cta-mid">
+                <p>Estou disponível para freelas e colaborações.</p>
+                <a href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20or%C3%A7amento." target="_blank" class="btn-light">Vamos trabalhar juntos <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="cta-contacts">
+                <a href="mailto:henriqueluizd91@gmail.com"><i class="fa-solid fa-envelope"></i> henriqueluizd91@gmail.com</a>
+                <a href="https://wa.me/5511989426415" target="_blank"><i class="fab fa-whatsapp"></i> (11) 98942-6415</a>
+                <a href="https://linkedin.com/in/henrique-luiz-dutra-a10346146/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Ricklima991" target="_blank"><i class="fab fa-github"></i> github.com/Ricklima991</a>
             </div>
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer class="footer">
-        <div class="footer-content">
-            <!-- Links redes sociais -->
-            <div class="social-links">
-                <a href="https://linkedin.com/in/henrique-luiz-dutra-a10346146/" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/Ricklima991" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://wa.me/5511989426415" target="_blank" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="mailto:henriqueluizd91@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            <!-- Copyright -->
-            <p>© 2026 Henrique Luiz Dutra. Todos os direitos reservados.</p>
-        </div>
+        <span>© 2026 Henrique Luiz Dutra. Todos os direitos reservados.</span>
+        <span class="connect">Vamos nos conectar
+            <a href="https://linkedin.com/in/henrique-luiz-dutra-a10346146/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Ricklima991" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/5511989426415" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </span>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
