@@ -36,24 +36,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Contagem progressiva dos números ao rolar até eles
-    const counters = document.querySelectorAll('[data-count]');
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const el = entry.target;
-            counterObserver.unobserve(el);
-            const target = parseInt(el.dataset.count, 10);
-            const duration = 1600;
-            const start = performance.now();
-            const tick = (now) => {
-                const p = Math.min((now - start) / duration, 1);
-                const eased = 1 - Math.pow(1 - p, 3);
-                el.textContent = Math.round(target * eased);
-                if (p < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
-        });
-    }, { threshold: 0.5 });
+    const runCounter = (el) => {
+        if (el.dataset.done) return;
+        el.dataset.done = "1";
+        const target = parseInt(el.dataset.count, 10) || 0;
+        const duration = 1600;
+        const start = performance.now();
+        const tick = (now) => {
+            const p = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(target * eased);
+            if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+    };
 
-    counters.forEach((el) => counterObserver.observe(el));
+    const statBoxes = document.querySelectorAll('.stats > div');
+    if ('IntersectionObserver' in window && statBoxes.length) {
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target.querySelector('[data-count]');
+                counterObserver.unobserve(entry.target);
+                if (el) runCounter(el);
+            });
+        }, { threshold: 0.2 });
+        statBoxes.forEach((box) => counterObserver.observe(box));
+    } else {
+        // Fallback: mostra os valores finais direto
+        document.querySelectorAll('[data-count]').forEach((el) => {
+            el.textContent = el.dataset.count;
+        });
+    }
 }); 
