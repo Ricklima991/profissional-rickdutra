@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos — Henrique Luiz Dutra | Web Designer & Front-End</title>
+    <meta name="description" content="Mergulhe nos projetos de Henrique Luiz Dutra: landing pages, sites completos e plataformas — do design ao código.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0B0B10">
+    <link rel="canonical" href="https://ricklima991.github.io/profissional-rickdutra/projetos.html">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .pj-hero { max-width: 1240px; margin: 0 auto; padding: 70px 28px 10px; position: relative; }
+        .pj-hero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(2.6rem, 8vw, 6rem); line-height: 1; color: var(--pill); text-transform: uppercase; }
+        .pj-hero h1 em { font-style: normal; color: transparent; -webkit-text-stroke: 1px var(--champagne); }
+        .pj-hero p { color: var(--muted); max-width: 56ch; margin-top: 16px; }
+        .filters { max-width: 1240px; margin: 0 auto; padding: 30px 28px 0; display: flex; gap: 10px; flex-wrap: wrap; }
+        .filters button {
+            background: transparent; color: var(--muted); cursor: pointer;
+            font-family: var(--body); font-size: 0.76rem; font-weight: 600;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            border: 1px solid var(--line); border-radius: 999px; padding: 10px 22px; transition: 0.25s;
+        }
+        .filters button:hover { color: #fff; border-color: var(--champagne); }
+        .filters button.active { background: var(--pill); color: #141414; border-color: var(--pill); }
+        .pj-list { max-width: 1240px; margin: 0 auto; padding: 36px 28px 20px; display: grid; gap: 22px; }
+        .pj-row {
+            display: grid; grid-template-columns: 1.1fr 1fr; gap: 0;
+            background: var(--surface); border: 1px solid var(--line);
+            border-radius: 22px; overflow: hidden;
+            transition: transform 0.35s ease, border-color 0.35s ease, opacity 0.35s ease;
+        }
+        .pj-row:hover { transform: translateY(-5px); border-color: rgba(216,195,165,.45); }
+        .pj-row.hide { display: none; }
+        .pj-row:nth-child(even) .pj-img { order: 2; }
+        .pj-img { position: relative; min-height: 320px; overflow: hidden; }
+        .pj-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.6s ease; }
+        .pj-row:hover .pj-img img { transform: scale(1.04); }
+        .pj-num {
+            position: absolute; top: 18px; left: 20px;
+            font-family: var(--display); font-size: 0.95rem; letter-spacing: 0.15em;
+            color: #fff; background: rgba(0,0,0,.55); border: 1px solid var(--line);
+            backdrop-filter: blur(8px); border-radius: 999px; padding: 6px 16px;
+        }
+        .pj-body { padding: 40px 38px; display: flex; flex-direction: column; justify-content: center; }
+        .pj-body h2 { font-family: var(--display); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.1rem); color: #fff; text-transform: uppercase; letter-spacing: 0.02em; }
+        .pj-body > p { color: var(--muted); font-size: 0.92rem; margin: 12px 0 18px; }
+        .pj-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+        .pj-tags span { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--champagne); background: rgba(216,195,165,.08); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; }
+        .pj-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .pj-end { max-width: 1240px; margin: 0 auto; padding: 30px 28px 70px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+        .pj-end p { color: var(--muted); font-size: 0.9rem; }
+        @media (max-width: 860px) {
+            .pj-row, .pj-row:nth-child(even) .pj-img { grid-template-columns: 1fr; order: 0; }
+            .pj-img { min-height: 240px; }
+            .pj-body { padding: 28px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a class="logo" href="index.html"><span class="monogram">HD</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html#trabalhos">Trabalhos</a></li>
+                <li><a href="index.html#capacidades">Capacidades</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20or%C3%A7amento." target="_blank" class="talk-btn">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pj-hero">
+            <span class="eyebrow">Imersão · do layout ao código</span>
+            <h1>Meus <em>projetos</em></h1>
+            <p>Cada projeto abaixo está no ar de verdade: clique, navegue e sinta a experiência. Filtre por tipo e encontre o que combina com o seu negócio.</p>
+        </section>
+
+        <div class="filters" role="tablist" aria-label="Filtrar projetos">
+            <button class="active" data-filter="all">Todos</button>
+            <button data-filter="landing">Landing pages</button>
+            <button data-filter="site">Sites & plataformas</button>
+            <button data-filter="gamma">Feitos no Gamma</button>
+        </div>
+
+        <section class="pj-list">
+            <article class="pj-row" data-cat="landing">
+                <div class="pj-img"><img src="img/nepofit-performance.png" alt="Nepofit Performance"><span class="pj-num">01</span></div>
+                <div class="pj-body">
+                    <h2>Nepofit Performance</h2>
+                    <p>Landing page de alta conversão para academia: planos, modalidades, depoimentos e agendamento direto no WhatsApp.</p>
+                    <div class="pj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Conversão</span></div>
+                    <div class="pj-actions">
+                        <a class="btn-light" href="https://ricklima991.github.io/nepofit-performance/" target="_blank">Visitar site <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="btn-line" href="https://github.com/Ricklima991/nepofit-performance" target="_blank"><i class="fab fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </article>
+            <article class="pj-row" data-cat="site">
+                <div class="pj-img"><img src="img/pousada-do-adao.png" alt="Pousada do Adão"><span class="pj-num">02</span></div>
+                <div class="pj-body">
+                    <h2>Pousada do Adão</h2>
+                    <p>Site completo de pousada e restaurante: suítes, cardápio, galeria, depoimentos e reservas integradas ao WhatsApp.</p>
+                    <div class="pj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Reservas</span></div>
+                    <div class="pj-actions">
+                        <a class="btn-light" href="https://ricklima991.github.io/pousada-do-adao/" target="_blank">Visitar site <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="btn-line" href="https://github.com/Ricklima991/pousada-do-adao" target="_blank"><i class="fab fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </article>
+            <article class="pj-row" data-cat="site">
+                <div class="pj-img"><img src="img/CrescerBem.png" alt="CrescerBem"><span class="pj-num">03</span></div>
+                <div class="pj-body">
+                    <h2>CrescerBem</h2>
+                    <p>Plataforma de desenvolvimento infantil: guias por idade, alimentação, rotina e consulta com especialistas.</p>
+                    <div class="pj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Conteúdo</span></div>
+                    <div class="pj-actions">
+                        <a class="btn-light" href="https://ricklima991.github.io/CrescerBem/" target="_blank">Visitar site <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="btn-line" href="https://github.com/Ricklima991/CrescerBem" target="_blank"><i class="fab fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </article>
+            <article class="pj-row" data-cat="landing">
+                <div class="pj-img"><img src="img/residencial-tradicao.jpg" alt="Residencial Tradição"><span class="pj-num">04</span></div>
+                <div class="pj-body">
+                    <h2>Residencial Tradição</h2>
+                    <p>Landing dark premium para venda de apartamentos: hero gigante, vitrine, specs do imóvel e captura de leads.</p>
+                    <div class="pj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Leads</span></div>
+                    <div class="pj-actions">
+                        <a class="btn-light" href="https://ricklima991.github.io/Landing-Page-Arquitetura/" target="_blank">Visitar site <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="btn-line" href="https://github.com/Ricklima991/Landing-Page-Arquitetura" target="_blank"><i class="fab fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </article>
+            <article class="pj-row" data-cat="landing">
+                <div class="pj-img"><img src="img/DncWeather.png" alt="DncWeather"><span class="pj-num">05</span></div>
+                <div class="pj-body">
+                    <h2>DncWeather</h2>
+                    <p>Previsão do tempo e busca de endereços em tempo real com consumo de APIs públicas.</p>
+                    <div class="pj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span></div>
+                    <div class="pj-actions">
+                        <a class="btn-light" href="https://ricklima991.github.io/Desafio-2-Dnc-consumo-de-API/" target="_blank">Visitar site <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="btn-line" href="https://github.com/Ricklima991/Desafio-2-Dnc-consumo-de-API" target="_blank"><i class="fab fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </article>
+            <article class="pj-row" data-cat="gamma">
+                <div class="pj-img"><img src="img/1_Assembleia-de-Deus-Ministerio-de-Santos.png" alt="Assembleia de Deus"><span class="pj-num">06</span></div>
+                <div class="pj-body">
+                    <h2>Assembleia de Deus</h2>
+                    <p>Site institucional do Ministério de Santos, criado com agilidade na plataforma Gamma.</p>
+                    <div class="pj-tags"><span>Gamma</span><span>No-code</span></div>
+                    <div class="pj-actions">
+                        <a class="btn-light" href="https://assembleia-de-deus-santo-bl17zlt.gamma.site/" target="_blank">Visitar site <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            <article class="pj-row" data-cat="gamma">
+                <div class="pj-img"><img src="img/1_Construindo-um-Portfolio-Profissional-com-React.png" alt="Portfólio React"><span class="pj-num">07</span></div>
+                <div class="pj-body">
+                    <h2>Portfólio React</h2>
+                    <p>Portfólio profissional com identidade React, montado de forma rápida e responsiva.</p>
+                    <div class="pj-tags"><span>Gamma</span><span>No-code</span></div>
+                    <div class="pj-actions">
+                        <a class="btn-light" href="https://gamma.app/docs/vyqycnxa6ht379t" target="_blank">Visitar site <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            <article class="pj-row" data-cat="gamma">
+                <div class="pj-img"><img src="img/Cha-de-Casa-Nova-Lauane-and-Eduardo-Estao-Prontos.png" alt="Chá de Casa Nova"><span class="pj-num">08</span></div>
+                <div class="pj-body">
+                    <h2>Chá de Casa Nova</h2>
+                    <p>Página de evento personalizada para Lauane & Eduardo, com clima leve e afetivo.</p>
+                    <div class="pj-tags"><span>Gamma</span><span>No-code</span></div>
+                    <div class="pj-actions">
+                        <a class="btn-light" href="https://cha-de-casa-nova-xf6taja.gamma.site/chadecasanovalauaneeduardo" target="_blank">Visitar site <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <div class="pj-end">
+            <p>Gostou do padrão? O próximo pode ser o seu.</p>
+            <a class="btn-light" href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vi%20seus%20projetos%20e%20quero%20um%20or%C3%A7amento." target="_blank">Quero um assim <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span>© 2026 Henrique Luiz Dutra. Todos os direitos reservados.</span>
+        <span class="connect">Vamos nos conectar
+            <a href="https://linkedin.com/in/henrique-luiz-dutra-a10346146/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Ricklima991" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/5511989426415" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </span>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.querySelectorAll('.filters button').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.filters button').forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                var f = btn.dataset.filter;
+                var n = 0;
+                document.querySelectorAll('.pj-row').forEach(function (row) {
+                    var show = f === 'all' || row.dataset.cat === f;
+                    row.classList.toggle('hide', !show);
+                    if (show) { n++; row.querySelector('.pj-num').textContent = String(n).padStart(2, '0'); }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
