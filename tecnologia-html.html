@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML — O que aprendi e o que faço | Henrique Luiz Dutra</title>
+<meta name="description" content="HTML semântico, SEO e acessibilidade: o que aprendi, o que consigo fazer e demo interativa.">
+<link rel="canonical" href="https://ricklima991.github.io/profissional-rickdutra/tecnologia-html.html">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+.detail{max-width:1240px;margin:0 auto;padding:70px 28px 70px}
+.crumb{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;display:flex;gap:10px;flex-wrap:wrap}
+.crumb a{color:var(--champagne)}
+.d-hero{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.d-hero h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.5rem);line-height:1;color:var(--pill);text-transform:uppercase}
+.d-hero h1 span{color:#e34f26}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4ade80;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.3);border-radius:999px;padding:8px 16px;margin:14px 0}
+.bar{height:10px;border-radius:99px;background:#26262f;overflow:hidden;margin:10px 0 6px}
+.bar i{display:block;height:100%;width:90%;background:linear-gradient(90deg,#e34f26,#f97316);border-radius:99px}
+.d-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 26px}
+.card h2{font-family:var(--display);font-size:1.3rem;color:#fff;text-transform:uppercase;margin-bottom:12px}
+.card h2 i{color:var(--champagne);margin-right:10px}
+.card ul{list-style:none;display:grid;gap:10px;color:var(--muted);font-size:.88rem}
+.card ul li::before{content:"✓ ";color:#4ade80;font-weight:700}
+.demo{margin-top:16px;background:#0e0e14;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.demo-head{padding:14px 18px;border-bottom:1px solid var(--line);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+.demo-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.demo-body textarea{background:#0e0e14;color:#c9c4bb;border:none;border-right:1px solid var(--line);padding:18px;font-family:Consolas,monospace;font-size:.82rem;min-height:220px;resize:vertical;outline:none;width:100%}
+.demo-body iframe{background:#fff;min-height:220px;border:none;width:100%}
+.proj{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.proj a{font-size:.75rem;font-weight:600;color:var(--text);background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+.proj a:hover{border-color:var(--champagne)}
+.nav2{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+@media(max-width:860px){.d-hero,.d-grid,.demo-body{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><nav class="nav-container">
+<a class="logo" href="index.html"><span class="monogram">HD</span></a>
+<ul class="nav-menu"><li><a href="index.html#trabalhos">Trabalhos</a></li><li><a href="tecnologias.html" style="color:#fff">Tecnologias</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="index.html#contato">Contato</a></li></ul>
+<div class="nav-right"><a href="https://wa.me/5511989426415" target="_blank" class="talk-btn">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a><div class="menu-toggle"><i class="fas fa-bars"></i></div></div>
+</nav></header>
+<main class="detail">
+<div class="crumb"><a href="index.html">Início</a> / <a href="tecnologias.html">Tecnologias</a> / HTML</div>
+<div class="d-hero">
+<div>
+<h1><span>HTML</span><br>Estrutura que vende</h1>
+<span class="badge"><i class="fa-solid fa-circle-check"></i> Avançado · uso todo dia · 90%</span>
+<div class="bar"><i></i></div>
+<p style="color:var(--muted);max-width:52ch">Aprendi HTML semântico de verdade: cada tag no lugar certo para o Google entender, o leitor de tela navegar e o site carregar rápido. É a base de todos os meus projetos publicados no GitHub Pages.</p>
+<div class="proj"><a href="https://ricklima991.github.io/nepofit-performance/" target="_blank">Nepofit ↗</a><a href="https://ricklima991.github.io/pousada-do-adao/" target="_blank">Pousada ↗</a><a href="https://ricklima991.github.io/CrescerBem/" target="_blank">CrescerBem ↗</a></div>
+</div>
+<div class="card"><h2><i class="fa-solid fa-code"></i>Teste agora — editor ao vivo</h2>
+<p style="color:var(--muted);font-size:.85rem">Edite o código à esquerda e veja o resultado na hora. É assim que ensino estrutura para clientes.</p>
+<div class="demo" style="margin-top:14px"><div class="demo-head"><span>index.html</span><span>● ● ●</span></div>
+<div class="demo-body"><textarea id="ed">&lt;h2 style="font-family:sans-serif"&gt;Sua oferta aqui&lt;/h2&gt;
+&lt;p style="font-family:sans-serif;color:#555"&gt;Título + subtítulo + botão = conversão.&lt;/p&gt;
+&lt;a href="#" style="display:inline-block;background:#111;color:#fff;padding:10px 20px;border-radius:99px;text-decoration:none;font-family:sans-serif"&gt;Quero o meu site&lt;/a&gt;</textarea>
+<iframe id="pv" title="preview"></iframe></div></div></div>
+</div>
+<div class="d-grid">
+<div class="card"><h2><i class="fa-solid fa-graduation-cap"></i>O que aprendi</h2><ul><li>Estrutura semântica: header, main, section, footer, article</li><li>SEO na prática: title, meta description, OG tags, sitemap</li><li>Formulários acessíveis com labels e validação nativa</li><li>Acessibilidade: alt, aria-labels, hierarquia de h1–h3</li><li>Performance: imagens otimizadas e lazy loading</li></ul></div>
+<div class="card"><h2><i class="fa-solid fa-rocket"></i>O que consigo fazer por você</h2><ul><li>Landing page semântica pronta para o Google</li><li>Página de vendas com copy + CTA no WhatsApp</li><li>Site institucional com 5–10 páginas organizadas</li><li>Revisão de SEO técnico em site existente</li><li>Transformar layout do Figma/Gamma em HTML real</li></ul></div>
+</div>
+<div class="nav2"><a class="btn-light" href="tecnologia-css.html">Próximo: CSS <i class="fa-solid fa-arrow-right"></i></a><a class="btn-line" href="tecnologias.html">← Todas as tecnologias</a></div>
+</main>
+<footer class="footer"><span>© 2026 Henrique Luiz Dutra.</span><span class="connect"><a href="https://github.com/Ricklima991" target="_blank"><i class="fab fa-github"></i></a><a href="https://wa.me/5511989426415" target="_blank"><i class="fab fa-whatsapp"></i></a></span></footer>
+<script src="js/main.js"></script>
+<script>const ed=document.getElementById('ed'),pv=document.getElementById('pv');function r(){pv.srcdoc=ed.value;}ed.addEventListener('input',r);r();</script>
+</body>
+</html>

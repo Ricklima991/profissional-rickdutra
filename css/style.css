@@ -157,6 +157,8 @@ a { text-decoration: none; }
 .cap p { font-size: 0.82rem; color: var(--muted); }
 .tools, .edu { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
 .tools { display: flex; flex-wrap: wrap; gap: 10px; }
+.tools a span { transition: transform 0.25s, border-color 0.25s; cursor: pointer; }
+.tools a span:hover { transform: translateY(-3px); border-color: rgba(216, 195, 165, 0.5); }
 .tools span { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 600; color: var(--text); background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 9px 14px; }
 .tools i { color: var(--champagne); }
 .tools em { font-style: normal; font-size: 0.68rem; color: var(--muted); }

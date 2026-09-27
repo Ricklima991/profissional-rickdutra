@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS — O que aprendi e o que faço | Henrique Luiz Dutra</title>
+<meta name="description" content="CSS responsivo, Flex, Grid e animações: o que aprendi, o que entrego e playground interativo.">
+<link rel="canonical" href="https://ricklima991.github.io/profissional-rickdutra/tecnologia-css.html">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+.detail{max-width:1240px;margin:0 auto;padding:70px 28px 70px}
+.crumb{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;display:flex;gap:10px}
+.crumb a{color:var(--champagne)}
+.d-hero{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.d-hero h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.5rem);line-height:1;color:var(--pill);text-transform:uppercase}
+.d-hero h1 span{color:#2965f1}
+.badge{display:inline-flex;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4ade80;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.3);border-radius:999px;padding:8px 16px;margin:14px 0}
+.bar{height:10px;border-radius:99px;background:#26262f;overflow:hidden;margin:10px 0}
+.bar i{display:block;height:100%;width:85%;background:linear-gradient(90deg,#2965f1,#7dd3fc);border-radius:99px}
+.d-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 26px}
+.card h2{font-family:var(--display);font-size:1.3rem;color:#fff;text-transform:uppercase;margin-bottom:12px}
+.card h2 i{color:var(--champagne);margin-right:10px}
+.card ul{list-style:none;display:grid;gap:10px;color:var(--muted);font-size:.88rem}
+.card ul li::before{content:"✓ ";color:#4ade80;font-weight:700}
+.stage{background:#0e0e14;border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center}
+#box{width:180px;height:180px;margin:18px auto;border-radius:24px;background:linear-gradient(135deg,#d8c3a5,#6366f1);display:grid;place-items:center;color:#111;font-weight:800;transition:all .35s}
+.btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.btns button{background:var(--surface-2);color:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:.75rem;font-weight:700;cursor:pointer}
+.btns button:hover{border-color:var(--champagne)}
+.nav2{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+@media(max-width:860px){.d-hero,.d-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><nav class="nav-container">
+<a class="logo" href="index.html"><span class="monogram">HD</span></a>
+<ul class="nav-menu"><li><a href="index.html#trabalhos">Trabalhos</a></li><li><a href="tecnologias.html" style="color:#fff">Tecnologias</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="index.html#contato">Contato</a></li></ul>
+<div class="nav-right"><a href="https://wa.me/5511989426415" target="_blank" class="talk-btn">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a><div class="menu-toggle"><i class="fas fa-bars"></i></div></div>
+</nav></header>
+<main class="detail">
+<div class="crumb"><a href="index.html">Início</a> / <a href="tecnologias.html">Tecnologias</a> / CSS</div>
+<div class="d-hero">
+<div>
+<h1><span>CSS</span><br>Design que responde</h1>
+<span class="badge"><i class="fa-solid fa-circle-check"></i> Avançado · 85%</span>
+<div class="bar"><i></i></div>
+<p style="color:var(--muted)">Aprendi a tirar qualquer layout do papel: Flexbox e Grid, variáveis, dark theme, animações suaves e responsivo total — do celular ao desktop. Este portfólio inteiro é CSS puro com esse padrão.</p>
+</div>
+<div class="stage">
+<h2 style="font-family:var(--display);color:#fff;text-transform:uppercase">Playground — clique e veja</h2>
+<p style="color:var(--muted);font-size:.82rem">Cada botão muda o CSS da caixa em tempo real.</p>
+<div id="box">Seu brand aqui</div>
+<div class="btns">
+<button onclick="box.style.borderRadius='99px'">Pílula</button>
+<button onclick="box.style.borderRadius='24px'">Quadrado</button>
+<button onclick="box.style.background='linear-gradient(135deg,#111,#333)';box.style.color='#fff'">Dark</button>
+<button onclick="box.style.background='linear-gradient(135deg,#d8c3a5,#6366f1)';box.style.color='#111'">Champagne</button>
+<button onclick="box.style.transform=box.style.transform?'':'scale(1.1) rotate(4deg)'">Animar</button>
+<button onclick="box.style.boxShadow=box.style.boxShadow?'':'0 20px 60px rgba(216,195,165,.4)'">Glow</button>
+</div>
+</div>
+</div>
+<div class="d-grid">
+<div class="card"><h2><i class="fa-solid fa-graduation-cap"></i>O que aprendi</h2><ul><li>Flexbox e Grid para qualquer layout</li><li>Variáveis CSS e temas (dark premium)</li><li>Responsivo com media queries e clamp()</li><li>Animações, transições e hover states</li><li>Mobile-first e performance visual</li></ul></div>
+<div class="card"><h2><i class="fa-solid fa-rocket"></i>O que consigo fazer</h2><ul><li>Site 100% responsivo (celular, tablet, PC)</li><li>Redesign de site antigo com cara premium</li><li>Sistema de botões, cards e tipografia</li><li>Landing dark com glow e animações suaves</li><li>Ajuste fino de layout quebrado</li></ul></div>
+</div>
+<div class="nav2"><a class="btn-light" href="tecnologia-javascript.html">Próximo: JavaScript <i class="fa-solid fa-arrow-right"></i></a><a class="btn-line" href="tecnologias.html">← Todas</a></div>
+</main>
+<footer class="footer"><span>© 2026 Henrique Luiz Dutra.</span><span class="connect"><a href="https://github.com/Ricklima991" target="_blank"><i class="fab fa-github"></i></a><a href="https://wa.me/5511989426415" target="_blank"><i class="fab fa-whatsapp"></i></a></span></footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>React (estudando) — Jornada e próximos passos | Henrique Luiz Dutra</title>
+<meta name="description" content="Estudando React na DNC: componentes, props e useState. Veja minha jornada e demo.">
+<link rel="canonical" href="https://ricklima991.github.io/profissional-rickdutra/tecnologia-react.html">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+.detail{max-width:1240px;margin:0 auto;padding:70px 28px 70px}
+.crumb{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;display:flex;gap:10px}.crumb a{color:var(--champagne)}
+.d-hero{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.d-hero h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.5rem);line-height:1;color:var(--pill);text-transform:uppercase}.d-hero h1 span{color:#61dafb}
+.badge{display:inline-flex;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7dd3fc;background:rgba(125,211,252,.1);border:1px solid rgba(125,211,252,.3);border-radius:999px;padding:8px 16px;margin:14px 0}
+.bar{height:10px;border-radius:99px;background:#26262f;overflow:hidden;margin:10px 0}.bar i{display:block;height:100%;width:35%;background:linear-gradient(90deg,#61dafb,#6366f1);border-radius:99px}
+.d-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 26px}
+.card h2{font-family:var(--display);font-size:1.3rem;color:#fff;text-transform:uppercase;margin-bottom:12px}.card h2 i{color:var(--champagne);margin-right:10px}
+.card ul{list-style:none;display:grid;gap:10px;color:var(--muted);font-size:.88rem}.card ul li::before{content:"✓ ";color:#4ade80;font-weight:700}
+.demo{background:#0e0e14;border:1px solid var(--line);border-radius:18px;padding:26px}
+.demo .phone{background:#14141b;border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center;margin-top:12px}
+.react-logo{font-size:2.5rem;color:#61dafb;animation:spin 6s linear infinite;display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+pre{background:#000;border:1px solid var(--line);border-radius:12px;padding:16px;color:#a7f3d0;font-size:.75rem;overflow-x:auto;margin-top:14px}
+.nav2{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+@media(max-width:860px){.d-hero,.d-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><nav class="nav-container">
+<a class="logo" href="index.html"><span class="monogram">HD</span></a>
+<ul class="nav-menu"><li><a href="index.html#trabalhos">Trabalhos</a></li><li><a href="tecnologias.html" style="color:#fff">Tecnologias</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="index.html#contato">Contato</a></li></ul>
+<div class="nav-right"><a href="https://wa.me/5511989426415" target="_blank" class="talk-btn">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a><div class="menu-toggle"><i class="fas fa-bars"></i></div></div>
+</nav></header>
+<main class="detail">
+<div class="crumb"><a href="index.html">Início</a> / <a href="tecnologias.html">Tecnologias</a> / React</div>
+<div class="d-hero">
+<div>
+<h1><span>React</span><br>Estudando a fundo</h1>
+<span class="badge"><i class="fa-solid fa-book-open"></i> Estudando · 35% · Trilha DNC</span>
+<div class="bar"><i></i></div>
+<p style="color:var(--muted)">Estou na trilha Full Stack da DNC migrando meu JS para React: componentes reutilizáveis, props e useState. Transparência total: ainda não entrego projetos grandes em React, mas já construo interfaces simples e estudo todo dia.</p>
+<div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn-light" href="https://github.com/Ricklima991/Desafio-03-e-04---Construa-uma-interface-utilizando-ReactJS---Escola-DNC-main" target="_blank"><i class="fab fa-github"></i> Ver desafio React</a></div>
+</div>
+<div class="demo">
+<span class="react-logo"><i class="fa-brands fa-react"></i></span>
+<h2 style="font-family:var(--display);color:#fff;text-transform:uppercase;margin-top:8px">Demo — mentalidade componente</h2>
+<p style="color:var(--muted);font-size:.82rem">Um contador em React seria assim. Teste o equivalente funcional:</p>
+<div class="phone"><div id="rc" style="font-family:var(--display);font-size:3rem;color:#fff">0</div>
+<div style="display:flex;gap:8px;justify-content:center;margin-top:10px"><button onclick="rv++;ru()" style="background:var(--pill);border:none;border-radius:99px;padding:10px 20px;font-weight:800;cursor:pointer">+ curtir</button><button onclick="rv=0;ru()" style="background:transparent;color:#fff;border:1px solid var(--line);border-radius:99px;padding:10px 20px;cursor:pointer">reset</button></div></div>
+<pre>function Card({ titulo }) {
+  const [likes, setLikes] = useState(0);
+  return &lt;button onClick={()=&gt;setLikes(likes+1)}&gt;
+    {titulo} · {likes} ❤
+  &lt;/button&gt;
+}</pre>
+</div>
+</div>
+<div class="d-grid">
+<div class="card"><h2><i class="fa-solid fa-graduation-cap"></i>O que já aprendi</h2><ul><li>JSX, componentes e props</li><li>useState para contadores e likes</li><li>Renderização de listas com map()</li><li>Estrutura Vite + organização de pastas</li><li>Diferença entre JS puro e React</li></ul></div>
+<div class="card"><h2><i class="fa-solid fa-rocket"></i>O que já consigo / próximo passo</h2><ul><li>Montar card e portfólio simples em React</li><li>Transformar página HTML em componentes</li><li>Em estudo: useEffect + consumo de API</li><li>Meta: migrar este portfólio para React</li><li>Acompanhe meu GitHub para ver a evolução</li></ul></div>
+</div>
+<div class="nav2"><a class="btn-light" href="tecnologia-git.html">Próximo: Git <i class="fa-solid fa-arrow-right"></i></a><a class="btn-line" href="tecnologias.html">← Todas</a></div>
+</main>
+<footer class="footer"><span>© 2026 Henrique Luiz Dutra.</span><span class="connect"><a href="https://github.com/Ricklima991" target="_blank"><i class="fab fa-github"></i></a></span></footer>
+<script src="js/main.js"></script>
+<script>let rv=0;function ru(){document.getElementById('rc').textContent=rv;}</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas & Tecnologias — Henrique Luiz Dutra</title>
+    <meta name="description" content="O que aprendi e o que consigo fazer com HTML, CSS, JavaScript, React, Git, GitHub, VS Code e Vercel. Clique em cada tecnologia e veja na prática.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0B0B10">
+    <link rel="canonical" href="https://ricklima991.github.io/profissional-rickdutra/tecnologias.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .tec-hero{max-width:1240px;margin:0 auto;padding:70px 28px 10px}
+        .tec-hero h1{font-family:var(--display);font-weight:600;font-size:clamp(2.6rem,8vw,5.5rem);line-height:1;color:var(--pill);text-transform:uppercase}
+        .tec-hero h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1px var(--champagne)}
+        .tec-hero p{color:var(--muted);max-width:62ch;margin-top:16px}
+        .tec-toolbar{max-width:1240px;margin:0 auto;padding:28px 28px 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+        .tec-toolbar input{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:11px 18px;color:#fff;font-family:var(--body);font-size:.85rem;min-width:240px;outline:none}
+        .tec-toolbar input:focus{border-color:var(--champagne)}
+        .filters{display:flex;gap:10px;flex-wrap:wrap}
+        .filters button{background:transparent;color:var(--muted);cursor:pointer;font-family:var(--body);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:10px 20px;transition:.25s}
+        .filters button:hover{color:#fff;border-color:var(--champagne)}
+        .filters button.active{background:var(--pill);color:#141414;border-color:var(--pill)}
+        .tec-grid{max-width:1240px;margin:0 auto;padding:30px 28px 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+        .tec-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px 22px;display:flex;flex-direction:column;gap:12px;transition:transform .3s,border-color .3s;position:relative;overflow:hidden;text-decoration:none}
+        .tec-card:hover{transform:translateY(-6px);border-color:rgba(216,195,165,.5)}
+        .tec-card.hide{display:none}
+        .tec-card .icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.6rem;background:var(--surface-2);border:1px solid var(--line);color:var(--champagne)}
+        .tec-card h2{font-family:var(--display);font-size:1.4rem;color:#fff;text-transform:uppercase;letter-spacing:.02em}
+        .tec-card .lvl{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+        .tec-card .lvl b{color:var(--green)}
+        .bar{height:8px;border-radius:99px;background:#26262f;overflow:hidden}
+        .bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--champagne),#fff);transition:width 1.1s ease}
+        .tec-card p{font-size:.82rem;color:var(--muted);flex:1}
+        .tec-card .go{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pill)}
+        .tec-card .go i{margin-left:8px}
+        .tec-note{max-width:1240px;margin:0 auto;padding:10px 28px 70px;color:var(--muted);font-size:.85rem}
+        @media(max-width:1020px){.tec-grid{grid-template-columns:1fr 1fr}}
+        @media(max-width:640px){.tec-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a class="logo" href="index.html"><span class="monogram">HD</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html#trabalhos">Trabalhos</a></li>
+                <li><a href="tecnologias.html" style="color:#fff">Tecnologias</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20or%C3%A7amento." target="_blank" class="talk-btn">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="tec-hero">
+            <span class="eyebrow">Clique e explore · o que aprendi + o que consigo fazer</span>
+            <h1>Ferramentas <em>& tecnologias</em></h1>
+            <p>Cada card abaixo é uma página interativa: o que aprendi, o que já consigo entregar, onde usei nos meus projetos e uma demo que você pode mexer. Comece por HTML, CSS e JavaScript — a base de tudo que publico.</p>
+        </section>
+        <div class="tec-toolbar">
+            <div class="filters" role="tablist" aria-label="Filtrar tecnologias">
+                <button class="active" data-filter="all">Todas</button>
+                <button data-filter="front">Front-end</button>
+                <button data-filter="tool">Ferramentas</button>
+                <button data-filter="deploy">Deploy</button>
+            </div>
+            <input id="tecSearch" type="search" placeholder="Buscar: ex. React, Git, CSS..." aria-label="Buscar tecnologia">
+        </div>
+        <section class="tec-grid" id="tecGrid">
+            <a class="tec-card" data-cat="front" data-name="html hypertext markup linguagem" href="tecnologia-html.html">
+                <div class="icon"><i class="fa-brands fa-html5" style="color:#e34f26"></i></div>
+                <h2>HTML</h2><span class="lvl"><b>● Avançado</b> · 90%</span>
+                <div class="bar"><i data-w="90%"></i></div>
+                <p>Estrutura semântica, SEO e acessibilidade. Base de todas as landing pages.</p>
+                <span class="go">Abrir página <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="tec-card" data-cat="front" data-name="css estilo responsivo flex grid animacao" href="tecnologia-css.html">
+                <div class="icon"><i class="fa-brands fa-css3-alt" style="color:#2965f1"></i></div>
+                <h2>CSS</h2><span class="lvl"><b>● Avançado</b> · 85%</span>
+                <div class="bar"><i data-w="85%"></i></div>
+                <p>Layouts responsivos, Flex/Grid, animações e dark premium.</p>
+                <span class="go">Abrir página <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="tec-card" data-cat="front" data-name="javascript js dom api fetch interatividade" href="tecnologia-javascript.html">
+                <div class="icon"><i class="fa-brands fa-js" style="color:#f7df1e"></i></div>
+                <h2>JavaScript</h2><span class="lvl"><b>● Intermediário</b> · 70%</span>
+                <div class="bar"><i data-w="70%"></i></div>
+                <p>DOM, filtros, menu mobile, consumo de API e animações no scroll.</p>
+                <span class="go">Abrir página <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="tec-card" data-cat="front" data-name="react componentes props usestate estudando" href="tecnologia-react.html">
+                <div class="icon"><i class="fa-brands fa-react" style="color:#61dafb"></i></div>
+                <h2>React <em style="font-style:normal;font-size:.65rem;color:var(--muted)">estudando</em></h2><span class="lvl"><b>● Estudando</b> · 35%</span>
+                <div class="bar"><i data-w="35%"></i></div>
+                <p>Componentes, props e useState. Trilha DNC em andamento.</p>
+                <span class="go">Abrir página <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="tec-card" data-cat="tool" data-name="git versionamento commit branch" href="tecnologia-git.html">
+                <div class="icon"><i class="fa-brands fa-git-alt" style="color:#f05032"></i></div>
+                <h2>Git</h2><span class="lvl"><b>● Intermediário</b> · 75%</span>
+                <div class="bar"><i data-w="75%"></i></div>
+                <p>Commits, branches e reversão com segurança em todo projeto.</p>
+                <span class="go">Abrir página <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="tec-card" data-cat="tool" data-name="github repositorio pages portfolio codigo" href="tecnologia-github.html">
+                <div class="icon"><i class="fab fa-github" style="color:#fff"></i></div>
+                <h2>GitHub</h2><span class="lvl"><b>● Intermediário</b> · 80%</span>
+                <div class="bar"><i data-w="80%"></i></div>
+                <p>15+ repositórios, Pages no ar e READMEs profissionais.</p>
+                <span class="go">Abrir página <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="tec-card" data-cat="tool" data-name="vscode visual studio code editor extensoes" href="tecnologia-vscode.html">
+                <div class="icon"><i class="fa-solid fa-code" style="color:#007acc"></i></div>
+                <h2>VS Code</h2><span class="lvl"><b>● Avançado</b> · 90%</span>
+                <div class="bar"><i data-w="90%"></i></div>
+                <p>Meu ambiente diário: atalhos, extensões e snippets.</p>
+                <span class="go">Abrir página <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="tec-card" data-cat="deploy" data-name="vercel deploy hospedagem preview dominio" href="tecnologia-vercel.html">
+                <div class="icon"><i class="fa-solid fa-cloud" style="color:#fff"></i></div>
+                <h2>Vercel</h2><span class="lvl"><b>● Intermediário</b> · 65%</span>
+                <div class="bar"><i data-w="65%"></i></div>
+                <p>Deploy contínuo, preview por commit e HTTPS grátis.</p>
+                <span class="go">Abrir página <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+        </section>
+        <div class="tec-note">Dica: dentro de cada página tem uma demo interativa + lista de “o que consigo fazer por você” — perfeito para mostrar para clientes.</div>
+    </main>
+    <footer class="footer">
+        <span>© 2026 Henrique Luiz Dutra. Todos os direitos reservados.</span>
+        <span class="connect">Vamos nos conectar
+            <a href="https://linkedin.com/in/henrique-luiz-dutra-a10346146/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Ricklima991" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/5511989426415" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </span>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        // Anima barras
+        requestAnimationFrame(()=>setTimeout(()=>document.querySelectorAll('.bar i').forEach(b=>b.style.width=b.dataset.w),150));
+        // Filtro + busca
+        const btns=document.querySelectorAll('.filters button'),cards=document.querySelectorAll('.tec-card'),search=document.getElementById('tecSearch');
+        let f='all';
+        function apply(){const q=(search.value||'').toLowerCase();cards.forEach(c=>{const okF=f==='all'||c.dataset.cat===f;const okQ=!q||c.dataset.name.includes(q)||c.querySelector('h2').textContent.toLowerCase().includes(q);c.classList.toggle('hide',!(okF&&okQ));});}
+        btns.forEach(b=>b.addEventListener('click',()=>{btns.forEach(x=>x.classList.remove('active'));b.classList.add('active');f=b.dataset.filter;apply();}));
+        search.addEventListener('input',apply);
+    </script>
+</body>
+</html>

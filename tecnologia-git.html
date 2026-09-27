@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Git — Versionamento sem medo | Henrique Luiz Dutra</title>
+<meta name="description" content="Git: commits, branches e reversão. Terminal simulado interativo.">
+<link rel="canonical" href="https://ricklima991.github.io/profissional-rickdutra/tecnologia-git.html">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+.detail{max-width:1240px;margin:0 auto;padding:70px 28px 70px}
+.crumb{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;display:flex;gap:10px}.crumb a{color:var(--champagne)}
+.d-hero{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.d-hero h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.5rem);line-height:1;color:var(--pill);text-transform:uppercase}.d-hero h1 span{color:#f05032}
+.badge{display:inline-flex;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4ade80;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.3);border-radius:999px;padding:8px 16px;margin:14px 0}
+.bar{height:10px;border-radius:99px;background:#26262f;overflow:hidden;margin:10px 0}.bar i{display:block;height:100%;width:75%;background:linear-gradient(90deg,#f05032,#f97316);border-radius:99px}
+.d-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 26px}
+.card h2{font-family:var(--display);font-size:1.3rem;color:#fff;text-transform:uppercase;margin-bottom:12px}.card h2 i{color:var(--champagne);margin-right:10px}
+.card ul{list-style:none;display:grid;gap:10px;color:var(--muted);font-size:.88rem}.card ul li::before{content:"✓ ";color:#4ade80;font-weight:700}
+.term{background:#000;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.term-head{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--muted);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.term-body{padding:18px;font-family:Consolas,monospace;font-size:.82rem;color:#a7f3d0;min-height:260px}
+.term-body .cmd{color:#fff}.term-body input{background:transparent;border:none;color:#fff;font-family:inherit;font-size:inherit;outline:none;width:70%}
+.qkeys{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.qkeys button{background:var(--surface-2);color:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-family:Consolas,monospace;font-size:.72rem;cursor:pointer}
+.nav2{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+@media(max-width:860px){.d-hero,.d-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><nav class="nav-container">
+<a class="logo" href="index.html"><span class="monogram">HD</span></a>
+<ul class="nav-menu"><li><a href="index.html#trabalhos">Trabalhos</a></li><li><a href="tecnologias.html" style="color:#fff">Tecnologias</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="index.html#contato">Contato</a></li></ul>
+<div class="nav-right"><a href="https://wa.me/5511989426415" target="_blank" class="talk-btn">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a><div class="menu-toggle"><i class="fas fa-bars"></i></div></div>
+</nav></header>
+<main class="detail">
+<div class="crumb"><a href="index.html">Início</a> / <a href="tecnologias.html">Tecnologias</a> / Git</div>
+<div class="d-hero">
+<div>
+<h1><span>Git</span><br>Nunca perco código</h1>
+<span class="badge"><i class="fa-solid fa-code-branch"></i> Intermediário · 75%</span>
+<div class="bar"><i></i></div>
+<p style="color:var(--muted)">Aprendi a versionar todo projeto: commits claros, branches por feature e reversão segura. Se algo quebra, volto atrás em segundos — por isso consigo atualizar sites de clientes sem medo.</p>
+</div>
+<div>
+<div class="term"><div class="term-head">terminal — digite help e aperte enter</div><div class="term-body" id="tout">$ bem-vindo! digite <span class="cmd">help</span><br><br><div>$ <input id="tin" placeholder="git status" autocomplete="off"></div></div></div>
+<div class="qkeys"><button onclick="run('git status')">git status</button><button onclick="run('git log --oneline')">git log</button><button onclick="run('git commit')">git commit</button><button onclick="run('help')">help</button></div>
+</div>
+</div>
+<div class="d-grid">
+<div class="card"><h2><i class="fa-solid fa-graduation-cap"></i>O que aprendi</h2><ul><li>init, add, commit e push com mensagens claras</li><li>Branches, merge e resolução de conflito</li><li>Revert e reset sem perder trabalho</li><li>.gitignore e histórico limpo</li><li>Fluxo com GitHub: pull request básico</li></ul></div>
+<div class="card"><h2><i class="fa-solid fa-rocket"></i>O que consigo fazer</h2><ul><li>Versionar seu site do zero</li><li>Criar ambiente de teste (branch) sem quebrar o ar</li><li>Recuperar versão anterior que funcionava</li><li>Organizar entregas por commit</li><li>Deixar seu projeto pronto para equipe</li></ul></div>
+</div>
+<div class="nav2"><a class="btn-light" href="tecnologia-github.html">Próximo: GitHub <i class="fa-solid fa-arrow-right"></i></a><a class="btn-line" href="tecnologias.html">← Todas</a></div>
+</main>
+<footer class="footer"><span>© 2026 Henrique Luiz Dutra.</span><span class="connect"><a href="https://github.com/Ricklima991" target="_blank"><i class="fab fa-github"></i></a></span></footer>
+<script src="js/main.js"></script>
+<script>
+const tout=document.getElementById('tout'),tin=document.getElementById('tin');
+const R={'help':'comandos: git status · git log --oneline · git branch · git commit · clear','git status':'On branch main<br>✔ working tree clean — 8 sites publicados','git log --oneline':'61dbf8b portfolio no ar<br>2b56889 pagina de projetos<br>b3a7099 redesign dark premium','git branch':'* main<br>  feature/nova-landing','git commit':'[main 9f3a2c1] feat: nova secao de contato','clear':''};
+function run(v){v=(v||tin.value).trim();if(!v)return;if(v==='clear'){tout.innerHTML='$ ';tin.value='';return;}const o=R[v]||'command not found. tente: help';tout.innerHTML+='$ '+v+'<br>'+o+'<br><br>$ <input id=tin placeholder=&quot;git status&quot; autocomplete=off>';const n=document.getElementById('tin');n.focus();n.addEventListener('keydown',e=>{if(e.key==='Enter')run();});tin.value='';}
+tin.addEventListener('keydown',e=>{if(e.key==='Enter')run();});
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vercel — Do push ao site no ar | Henrique Luiz Dutra</title>
+<meta name="description" content="Vercel: deploy contínuo, preview por commit e HTTPS. Passo a passo interativo.">
+<link rel="canonical" href="https://ricklima991.github.io/profissional-rickdutra/tecnologia-vercel.html">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+.detail{max-width:1240px;margin:0 auto;padding:70px 28px 70px}
+.crumb{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;display:flex;gap:10px}.crumb a{color:var(--champagne)}
+.d-hero{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.d-hero h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.5rem);line-height:1;color:var(--pill);text-transform:uppercase}
+.badge{display:inline-flex;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fbbf24;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);border-radius:999px;padding:8px 16px;margin:14px 0}
+.bar{height:10px;border-radius:99px;background:#26262f;overflow:hidden;margin:10px 0}.bar i{display:block;height:100%;width:65%;background:linear-gradient(90deg,#fff,#999);border-radius:99px}
+.d-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 26px}
+.card h2{font-family:var(--display);font-size:1.3rem;color:#fff;text-transform:uppercase;margin-bottom:12px}.card h2 i{color:var(--champagne);margin-right:10px}
+.card ul{list-style:none;display:grid;gap:10px;color:var(--muted);font-size:.88rem}.card ul li::before{content:"✓ ";color:#4ade80;font-weight:700}
+.steps{display:grid;gap:10px;margin-top:12px}.step{background:#14141b;border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;transition:.25s}.step:hover{border-color:var(--champagne)}.step b{color:#fff;font-size:.85rem}.step p{color:var(--muted);font-size:.8rem;display:none;margin-top:6px}.step.open p{display:block}
+.progress{height:8px;background:#26262f;border-radius:99px;overflow:hidden;margin-top:12px}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#4ade80,#fff);transition:width .4s}
+.nav2{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+@media(max-width:860px){.d-hero,.d-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><nav class="nav-container">
+<a class="logo" href="index.html"><span class="monogram">HD</span></a>
+<ul class="nav-menu"><li><a href="index.html#trabalhos">Trabalhos</a></li><li><a href="tecnologias.html" style="color:#fff">Tecnologias</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="index.html#contato">Contato</a></li></ul>
+<div class="nav-right"><a href="https://wa.me/5511989426415" target="_blank" class="talk-btn">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a><div class="menu-toggle"><i class="fas fa-bars"></i></div></div>
+</nav></header>
+<main class="detail">
+<div class="crumb"><a href="index.html">Início</a> / <a href="tecnologias.html">Tecnologias</a> / Vercel</div>
+<div class="d-hero">
+<div>
+<h1>Vercel<br>Site no ar em minutos</h1>
+<span class="badge"><i class="fa-solid fa-cloud"></i> Intermediário · 65%</span>
+<div class="bar"><i></i></div>
+<p style="color:var(--muted)">Aprendi a sair do “só no meu PC” para link público com HTTPS: conecto o GitHub na Vercel e cada push vira deploy automático com preview para o cliente aprovar antes de ir ao ar.</p>
+</div>
+<div class="card">
+<h2><i class="fa-solid fa-list-check"></i>Clique em cada passo</h2>
+<div class="steps" id="steps">
+<div class="step" onclick="toggle(this)"><b>1 · Conectar o GitHub</b><p>Importo o repositório na Vercel em 2 cliques. Nada de FTP ou painel confuso.</p></div>
+<div class="step" onclick="toggle(this)"><b>2 · Deploy automático</b><p>Cada git push gera um build. Se der erro, a Vercel mostra o log exato.</p></div>
+<div class="step" onclick="toggle(this)"><b>3 · Link de preview</b><p>Cada commit ganha URL temporária — mando para o cliente aprovar no celular.</p></div>
+<div class="step" onclick="toggle(this)"><b>4 · Domínio + HTTPS</b><p>Aponto seu domínio (ex.: suasite.com.br) e o certificado sai grátis.</p></div>
+</div>
+<div class="progress"><i id="pv"></i></div>
+<p id="plabel" style="color:var(--muted);font-size:.78rem;margin-top:8px">0 de 4 passos explorados</p>
+</div>
+</div>
+<div class="d-grid">
+<div class="card"><h2><i class="fa-solid fa-graduation-cap"></i>O que aprendi</h2><ul><li>Deploy contínuo ligado ao GitHub</li><li>Preview URL por commit/branch</li><li>Variáveis de ambiente básicas</li><li>Domínio próprio + HTTPS grátis</li><li>Rollback para versão anterior em 1 clique</li></ul></div>
+<div class="card"><h2><i class="fa-solid fa-rocket"></i>O que consigo fazer</h2><ul><li>Colocar seu site no ar com link profissional</li><li>Atualizações sem downtime (push = no ar)</li><li>Página de preview para aprovação</li><li>Ligar GitHub Pages ou Vercel ao domínio</li><li>Escolher hospedagem certa p/ cada projeto</li></ul></div>
+</div>
+<div class="nav2"><a class="btn-light" href="tecnologias.html">Ver todas <i class="fa-solid fa-arrow-right"></i></a><a class="btn-line" href="index.html#contato">Pedir orçamento →</a></div>
+</main>
+<footer class="footer"><span>© 2026 Henrique Luiz Dutra.</span><span class="connect"><a href="https://github.com/Ricklima991" target="_blank"><i class="fab fa-github"></i></a></span></footer>
+<script src="js/main.js"></script>
+<script>function toggle(el){el.classList.toggle('open');const n=document.querySelectorAll('.step.open').length;document.getElementById('pv').style.width=(n/4*100)+'%';document.getElementById('plabel').textContent=n+' de 4 passos explorados';}</script>
+</body>
+</html>

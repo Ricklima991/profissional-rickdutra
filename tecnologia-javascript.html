@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript — O que aprendi e o que faço | Henrique Luiz Dutra</title>
+<meta name="description" content="JavaScript: DOM, filtros, APIs e interatividade. Veja demos funcionando.">
+<link rel="canonical" href="https://ricklima991.github.io/profissional-rickdutra/tecnologia-javascript.html">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+.detail{max-width:1240px;margin:0 auto;padding:70px 28px 70px}
+.crumb{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;display:flex;gap:10px}.crumb a{color:var(--champagne)}
+.d-hero{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.d-hero h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.5rem);line-height:1;color:var(--pill);text-transform:uppercase}.d-hero h1 span{color:#f7df1e}
+.badge{display:inline-flex;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fbbf24;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);border-radius:999px;padding:8px 16px;margin:14px 0}
+.bar{height:10px;border-radius:99px;background:#26262f;overflow:hidden;margin:10px 0}.bar i{display:block;height:100%;width:70%;background:linear-gradient(90deg,#f7df1e,#f97316);border-radius:99px}
+.d-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 26px}
+.card h2{font-family:var(--display);font-size:1.3rem;color:#fff;text-transform:uppercase;margin-bottom:12px}.card h2 i{color:var(--champagne);margin-right:10px}
+.card ul{list-style:none;display:grid;gap:10px;color:var(--muted);font-size:.88rem}.card ul li::before{content:"✓ ";color:#4ade80;font-weight:700}
+.demo{background:#0e0e14;border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center}
+.demo .row{display:flex;gap:10px;justify-content:center;align-items:center;margin:14px 0;flex-wrap:wrap}
+.demo button{background:var(--pill);color:#111;border:none;border-radius:999px;padding:12px 22px;font-weight:800;cursor:pointer;font-size:.85rem}
+.demo button.ghost{background:transparent;color:#fff;border:1px solid var(--line)}
+#count{font-family:var(--display);font-size:3.5rem;color:#fff}
+pre{background:#000;border:1px solid var(--line);border-radius:12px;padding:16px;color:#a7f3d0;font-size:.75rem;text-align:left;overflow-x:auto;margin-top:14px}
+.nav2{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+@media(max-width:860px){.d-hero,.d-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><nav class="nav-container">
+<a class="logo" href="index.html"><span class="monogram">HD</span></a>
+<ul class="nav-menu"><li><a href="index.html#trabalhos">Trabalhos</a></li><li><a href="tecnologias.html" style="color:#fff">Tecnologias</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="index.html#contato">Contato</a></li></ul>
+<div class="nav-right"><a href="https://wa.me/5511989426415" target="_blank" class="talk-btn">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a><div class="menu-toggle"><i class="fas fa-bars"></i></div></div>
+</nav></header>
+<main class="detail">
+<div class="crumb"><a href="index.html">Início</a> / <a href="tecnologias.html">Tecnologias</a> / JavaScript</div>
+<div class="d-hero">
+<div>
+<h1><span>JavaScript</span><br>Sites vivos</h1>
+<span class="badge"><i class="fa-solid fa-bolt"></i> Intermediário · 70%</span>
+<div class="bar"><i></i></div>
+<p style="color:var(--muted)">Aprendi a dar vida às páginas: menu mobile, filtros de projetos, animações no scroll (IntersectionObserver), contadores e consumo de API com fetch — como no projeto DncWeather com previsão do tempo em tempo real.</p>
+</div>
+<div class="demo">
+<h2 style="font-family:var(--display);color:#fff;text-transform:uppercase">Demo — contador + tema</h2>
+<p style="color:var(--muted);font-size:.82rem">O mesmo padrão de useState que uso no React, feito em JS puro.</p>
+<div id="count">0</div>
+<div class="row"><button onclick="c--;u()">−1</button><button onclick="c++;u()">+1</button><button class="ghost" onclick="c=0;u()">Zerar</button></div>
+<div class="row"><button class="ghost" onclick="document.body.style.filter=document.body.style.filter?'':'invert(.92) hue-rotate(180deg)'">Alternar tema da página 🌙</button></div>
+<pre>let count = 0;
+function increment(){ count++; render(); }
+// + fetch('api...').then(r=>r.json())</pre>
+</div>
+</div>
+<div class="d-grid">
+<div class="card"><h2><i class="fa-solid fa-graduation-cap"></i>O que aprendi</h2><ul><li>DOM: selecionar, criar e animar elementos</li><li>Eventos, filtros e busca em tempo real</li><li>Fetch API: previsão do tempo e CEP</li><li>IntersectionObserver para reveal no scroll</li><li>LocalStorage e lógica de carrinho/contador</li></ul></div>
+<div class="card"><h2><i class="fa-solid fa-rocket"></i>O que consigo fazer</h2><ul><li>Filtro de produtos/projetos funcionando</li><li>Formulário com validação + envio p/ WhatsApp</li><li>Consumo de API pública no seu site</li><li>Animações de entrada e contadores</li><li>Correção de bugs em scripts existentes</li></ul></div>
+</div>
+<div class="nav2"><a class="btn-light" href="tecnologia-react.html">Próximo: React <i class="fa-solid fa-arrow-right"></i></a><a class="btn-line" href="tecnologias.html">← Todas</a></div>
+</main>
+<footer class="footer"><span>© 2026 Henrique Luiz Dutra.</span><span class="connect"><a href="https://github.com/Ricklima991" target="_blank"><i class="fab fa-github"></i></a><a href="https://wa.me/5511989426415" target="_blank"><i class="fab fa-whatsapp"></i></a></span></footer>
+<script src="js/main.js"></script>
+<script>let c=0;function u(){document.getElementById('count').textContent=c;}</script>
+</body>
+</html>
