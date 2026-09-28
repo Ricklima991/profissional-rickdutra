@@ -77,7 +77,7 @@ pre{background:#000;border:1px solid var(--line);border-radius:12px;padding:16px
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js', { scope: '/profissional-rickdutra/' }).catch(()=>{});
+        navigator.serviceWorker.register('./sw.js').catch(()=>{});
       });
     }
     </script>

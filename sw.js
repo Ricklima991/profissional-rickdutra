@@ -1,19 +1,19 @@
-/* Estúdio Rick Digital — Service Worker */
-const CACHE = 'rick-digital-v1';
+/* Estúdio Rick Digital — Service Worker (funciona em qualquer domínio) */
+const CACHE = 'rick-digital-v2';
 const CORE = [
-  '/profissional-rickdutra/',
-  '/profissional-rickdutra/index.html',
-  '/profissional-rickdutra/sobre.html',
-  '/profissional-rickdutra/projetos.html',
-  '/profissional-rickdutra/tecnologias.html',
-  '/profissional-rickdutra/termos.html',
-  '/profissional-rickdutra/css/style.css',
-  '/profissional-rickdutra/js/main.js',
-  '/profissional-rickdutra/manifest.webmanifest',
-  '/profissional-rickdutra/img/icon-192.png',
-  '/profissional-rickdutra/img/icon-512.png',
-  '/profissional-rickdutra/img/maskable-512.png',
-  '/profissional-rickdutra/img/logo-rd.svg'
+  './',
+  './index.html',
+  './sobre.html',
+  './projetos.html',
+  './tecnologias.html',
+  './termos.html',
+  './css/style.css',
+  './js/main.js',
+  './manifest.webmanifest',
+  './img/icon-192.png',
+  './img/icon-512.png',
+  './img/maskable-512.png',
+  './img/logo-rd.svg'
 ];
 
 self.addEventListener('install', (e) => {
@@ -36,7 +36,7 @@ self.addEventListener('fetch', (e) => {
         const copy = res.clone();
         caches.open(CACHE).then((c) => c.put(request, copy));
         return res;
-      }).catch(() => caches.match(request).then((m) => m || caches.match('/profissional-rickdutra/index.html')))
+      }).catch(() => caches.match(request).then((m) => m || caches.match('./index.html')))
     );
     return;
   }

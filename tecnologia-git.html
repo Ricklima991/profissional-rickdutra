@@ -72,7 +72,7 @@ tin.addEventListener('keydown',e=>{if(e.key==='Enter')run();});
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js', { scope: '/profissional-rickdutra/' }).catch(()=>{});
+        navigator.serviceWorker.register('./sw.js').catch(()=>{});
       });
     }
     </script>
