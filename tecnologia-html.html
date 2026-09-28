@@ -35,6 +35,13 @@
 .nav2{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 @media(max-width:860px){.d-hero,.d-grid,.demo-body{grid-template-columns:1fr}}
 </style>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#0B0B10">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Rick Digital">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 </head>
 <body>
 <header class="header"><nav class="nav-container">
@@ -69,5 +76,12 @@
 <footer class="footer"><span>© 2026 Estúdio Rick Digital · Henrique Luiz Dutra.</span><span class="connect"><a href="https://github.com/Ricklima991" target="_blank"><i class="fab fa-github"></i></a><a href="https://wa.me/5511989426415" target="_blank"><i class="fab fa-whatsapp"></i></a></span></footer>
 <script src="js/main.js"></script>
 <script>const ed=document.getElementById('ed'),pv=document.getElementById('pv');function r(){pv.srcdoc=ed.value;}ed.addEventListener('input',r);r();</script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js', { scope: '/profissional-rickdutra/' }).catch(()=>{});
+      });
+    }
+    </script>
 </body>
 </html>

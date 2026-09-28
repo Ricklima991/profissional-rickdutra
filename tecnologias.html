@@ -42,6 +42,13 @@
         @media(max-width:1020px){.tec-grid{grid-template-columns:1fr 1fr}}
         @media(max-width:640px){.tec-grid{grid-template-columns:1fr}}
     </style>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#0B0B10">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Rick Digital">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 </head>
 <body>
     <header class="header">
@@ -152,6 +159,13 @@
         function apply(){const q=(search.value||'').toLowerCase();cards.forEach(c=>{const okF=f==='all'||c.dataset.cat===f;const okQ=!q||c.dataset.name.includes(q)||c.querySelector('h2').textContent.toLowerCase().includes(q);c.classList.toggle('hide',!(okF&&okQ));});}
         btns.forEach(b=>b.addEventListener('click',()=>{btns.forEach(x=>x.classList.remove('active'));b.classList.add('active');f=b.dataset.filter;apply();}));
         search.addEventListener('input',apply);
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js', { scope: '/profissional-rickdutra/' }).catch(()=>{});
+      });
+    }
     </script>
 </body>
 </html>

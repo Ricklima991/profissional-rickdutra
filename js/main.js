@@ -34,4 +34,30 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.animate-on-scroll, .reveal').forEach((element) => {
         observer.observe(element);
     });
+
+    // PWA install + share
+    let deferredPrompt = null;
+    const installBtn = document.getElementById('pwa-install');
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        if (installBtn) installBtn.style.display = 'inline-flex';
+    });
+    if (installBtn) {
+        installBtn.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            await deferredPrompt.userChoice;
+            deferredPrompt = null;
+            installBtn.style.display = 'none';
+        });
+    }
+    const shareBtn = document.getElementById('pwa-share');
+    if (shareBtn) {
+        shareBtn.addEventListener('click', async () => {
+            const data = { title: 'Estúdio Rick Digital', text: 'Fanpages que convertem e sites ultraprofissionais — veja o portfólio:', url: location.href };
+            if (navigator.share) { try { await navigator.share(data); } catch (_) {} }
+            else { try { await navigator.clipboard.writeText(data.url); alert('Link copiado!'); } catch (_) {} }
+        });
+    }
 }); 

@@ -30,6 +30,13 @@
         .bio-cta { max-width: 1240px; margin: 0 auto; padding: 44px 28px 70px; display: flex; gap: 14px; flex-wrap: wrap; }
         @media (max-width: 860px) { .bio-grid { grid-template-columns: 1fr; } }
     </style>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#0B0B10">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Rick Digital">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 </head>
 <body>
     <header class="header">
@@ -106,5 +113,12 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js', { scope: '/profissional-rickdutra/' }).catch(()=>{});
+      });
+    }
+    </script>
 </body>
 </html>

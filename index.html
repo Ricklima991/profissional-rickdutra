@@ -36,6 +36,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#0B0B10">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Rick Digital">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 </head>
 <body>
     <!-- NAV -->
@@ -203,6 +210,10 @@
             <div class="cta-mid">
                 <p>Estou disponível para freelas e colaborações.</p>
                 <a href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20or%C3%A7amento." target="_blank" class="btn-light">Vamos trabalhar juntos <i class="fa-solid fa-arrow-right"></i></a>
+                <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+                    <button id="pwa-install" class="btn-line" style="display:none;cursor:pointer"><i class="fa-solid fa-download"></i> Instalar app</button>
+                    <button id="pwa-share" class="btn-line" style="cursor:pointer"><i class="fa-solid fa-share-nodes"></i> Compartilhar</button>
+                </div>
             </div>
             <div class="cta-contacts">
                 <a href="mailto:henriqueluizd91@gmail.com"><i class="fa-solid fa-envelope"></i> henriqueluizd91@gmail.com</a>
@@ -223,5 +234,12 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js', { scope: '/profissional-rickdutra/' }).catch(()=>{});
+      });
+    }
+    </script>
 </body>
 </html>

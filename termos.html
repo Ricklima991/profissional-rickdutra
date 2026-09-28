@@ -25,6 +25,13 @@
         .back-link{display:inline-flex;align-items:center;gap:8px;margin-bottom:10px;text-decoration:none;color:#fff;opacity:.8}
         .back-link:hover{opacity:1}
     </style>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#0B0B10">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Rick Digital">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 </head>
 <body>
     <header class="header">
@@ -150,5 +157,12 @@
             <a href="https://wa.me/5511989426415" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </span>
     </footer>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js', { scope: '/profissional-rickdutra/' }).catch(()=>{});
+      });
+    }
+    </script>
 </body>
 </html>
