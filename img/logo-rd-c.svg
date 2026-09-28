@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Estúdio Rick Digital opção C">
+  <defs>
+    <linearGradient id="rdc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <polygon points="32,3 58,17 58,47 32,61 6,47 6,17" fill="#14141b" stroke="url(#rdc)" stroke-width="3"/>
+  <polygon points="35,18 24,36 31,36 29,48 42,30 34,30" fill="url(#rdc)"/>
+</svg>
