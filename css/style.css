@@ -43,6 +43,11 @@ a { text-decoration: none; }
   font-family: var(--display); font-weight: 600; font-size: 1.05rem; letter-spacing: 0.05em;
   color: var(--pill); border: 1px solid var(--line); border-radius: 12px;
 }
+/* Marca Estúdio Rick Digital */
+.logo { display: inline-flex; align-items: center; gap: 10px; }
+.brand-logo { width: 38px; height: 38px; border-radius: 12px; }
+.brand-name { font-family: var(--display); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.08em; color: var(--pill); text-transform: uppercase; white-space: nowrap; }
+.brand-name b { color: var(--champagne); font-weight: 600; }
 .nav-menu { display: flex; list-style: none; gap: 30px; }
 .nav-menu a { color: var(--muted); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; transition: color 0.25s; }
 .nav-menu a:hover { color: #fff; }
@@ -229,6 +234,7 @@ a { text-decoration: none; }
   .nav-menu a { padding: 12px 0; border-bottom: 1px solid var(--line); }
   .menu-toggle { display: block; }
   .talk-btn { display: none; }
+  .brand-name { display: none; }
   .stats { grid-template-columns: 1fr 1fr; }
   .stats div:nth-child(3) { border-left: none; }
   .stats div { border-top: 1px solid var(--line); }
