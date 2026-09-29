@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monte seu orçamento grátis — Estúdio Rick Digital</title>
+<meta name="description" content="Simule o preço do seu site em 30 segundos e receba no WhatsApp: fanpage, site completo ou loja. Resposta em até 24h.">
+<link rel="canonical" href="https://studiorickdigital.github.io/orcamento.html">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+.orc{max-width:860px;margin:0 auto;padding:70px 28px 80px}
+.orc h1{font-family:var(--display);font-size:clamp(2.2rem,6vw,4rem);line-height:1;color:var(--pill);text-transform:uppercase}
+.orc h1 span{color:var(--champagne)}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;margin-top:16px}
+.step h2{font-family:var(--display);font-size:1.15rem;color:#fff;text-transform:uppercase;margin-bottom:14px}
+.opts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.opts button{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:18px 12px;color:#fff;cursor:pointer;font-family:var(--body);font-size:.85rem;font-weight:600}
+.opts button small{display:block;color:var(--mut);font-weight:400;margin-top:6px}
+.opts button.on{border-color:var(--champagne);background:rgba(216,195,165,.1)}
+.extras{display:flex;gap:8px;flex-wrap:wrap}
+.extras button{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:10px 18px;color:#fff;cursor:pointer;font-size:.8rem;font-weight:600}
+.extras button.on{border-color:#4ade80;color:#4ade80}
+#res{display:none;background:linear-gradient(120deg,#1d1d27,#14141b);border:1px solid rgba(216,195,165,.4);border-radius:20px;padding:32px;margin-top:18px;text-align:center}
+#res strong{font-family:var(--display);font-size:2.6rem;color:#fff;display:block}
+#res p{color:var(--mut);font-size:.88rem;margin:8px 0 18px}
+@media(max-width:640px){.opts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><nav class="nav-container">
+<a class="logo" href="index.html"><img class="brand-logo" src="img/logo-rd.svg" alt="Estúdio Rick Digital" width="38" height="38"><span class="brand-name">ESTÚDIO <b>RICK DIGITAL</b></span></a>
+<ul class="nav-menu"><li><a href="index.html#trabalhos">Trabalhos</a></li><li><a href="tecnologias.html">Tecnologias</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="index.html#contato">Contato</a></li></ul>
+<div class="nav-right"><a href="https://wa.me/5511989426415" target="_blank" class="talk-btn">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a><div class="menu-toggle"><i class="fas fa-bars"></i></div></div>
+</nav></header>
+<main class="orc">
+<span class="eyebrow">30 segundos · sem compromisso</span>
+<h1>Monte seu <span>orçamento</span></h1>
+<p style="color:var(--mut);margin-top:10px">Responda 3 perguntas e receba o valor + prazo direto no seu WhatsApp. Respondo em até 24h.</p>
+<div class="step"><h2>1 · O que você precisa?</h2><div class="opts" id="o_tipo">
+<button data-v="fanpage" data-p="497" data-t="7 dias" class="on">🚀 Fanpage<small>vende 1 oferta · a partir de R$ 497</small></button>
+<button data-v="site" data-p="997" data-t="14 dias">🏢 Site completo<small>várias páginas · a partir de R$ 997</small></button>
+<button data-v="loja" data-p="2497" data-t="30 dias">🛒 Loja / agendamento<small>vende sozinho · a partir de R$ 2.497</small></button>
+</div></div>
+<div class="step"><h2>2 · Extras (opcional)</h2><div class="extras" id="o_ext">
+<button data-v="domínio próprio">🌐 Domínio próprio</button>
+<button data-v="logo">🎨 Logo</button>
+<button data-v="SEO no Google">📈 SEO no Google</button>
+<button data-v="urgência">⚡ Prazo urgente</button>
+</div></div>
+<div class="step"><h2>3 · Seu nome</h2><input id="o_nome" placeholder="Como posso te chamar?" style="background:#0e0e14;border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:#fff;width:100%;outline:none">
+<button class="btn-light" style="margin-top:14px;border:none;cursor:pointer" onclick="calc()">Ver meu orçamento <i class="fa-solid fa-arrow-right"></i></button></div>
+<div id="res"><span class="eyebrow">Seu investimento estimado</span><strong id="r_valor"></strong><p id="r_detalhe"></p><a id="r_wa" href="#" target="_blank" class="btn-light">Pedir no WhatsApp <i class="fab fa-whatsapp"></i></a></div>
+</main>
+<footer class="footer"><span>© 2026 Estúdio Rick Digital · Henrique Luiz Dutra.</span></footer>
+<script src="js/main.js"></script>
+<script>
+document.querySelectorAll('#o_tipo button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#o_tipo button').forEach(x=>x.classList.remove('on'));b.classList.add('on');});
+document.querySelectorAll('#o_ext button').forEach(b=>b.onclick=()=>b.classList.toggle('on'));
+function calc(){
+  const t=document.querySelector('#o_tipo button.on');
+  const ext=[...document.querySelectorAll('#o_ext button.on')].map(b=>b.dataset.v);
+  const nome=(document.getElementById('o_nome').value||'cliente').trim();
+  const mult=ext.includes('urgência')?1.3:1;
+  const valor='R$ '+Math.round(+t.dataset.p*mult).toLocaleString('pt-BR');
+  document.getElementById('r_valor').textContent='a partir de '+valor;
+  document.getElementById('r_detalhe').textContent=`${t.dataset.v} · prazo ~${t.dataset.t}${ext.length?' · extras: '+ext.join(', '):''}`;
+  const msg=encodeURIComponent(`Olá! Sou ${nome} 🚀 Montei meu orçamento no site: ${t.dataset.v} (${valor}, ~${t.dataset.t})${ext.length?' + '+ext.join(', '):''}. Quero conversar!`);
+  document.getElementById('r_wa').href=`https://wa.me/5511989426415?text=${msg}`;
+  document.getElementById('res').style.display='block';
+  document.getElementById('res').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>
