@@ -48,8 +48,8 @@ a { text-decoration: none; }
 .brand-logo { width: 38px; height: 38px; border-radius: 12px; }
 .brand-name { font-family: var(--display); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.08em; color: var(--pill); text-transform: uppercase; white-space: nowrap; }
 .brand-name b { color: var(--champagne); font-weight: 600; }
-.nav-menu { display: flex; list-style: none; gap: 30px; }
-.nav-menu a { color: var(--muted); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; transition: color 0.25s; }
+.nav-menu { display: flex; list-style: none; gap: 20px; }
+.nav-menu a { color: var(--muted); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.25s; white-space: nowrap; }
 .nav-menu a:hover { color: #fff; }
 .nav-right { display: flex; align-items: center; gap: 12px; }
 .talk-btn {
