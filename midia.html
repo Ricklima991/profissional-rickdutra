@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kit de Mídia — Estúdio Rick Digital</title>
+<meta name="description" content="Kit oficial da equipe Estúdio Rick Digital: logo, cores, banners, textos prontos e links rastreados para divulgar o portfólio.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://studiorickdigital.github.io/midia.html">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+.media{max-width:1000px;margin:0 auto;padding:70px 28px 80px}
+.media h1{font-family:var(--display);font-size:clamp(2.2rem,6vw,4rem);line-height:1;color:var(--pill);text-transform:uppercase}
+.media h1 span{color:var(--champagne)}
+.msec{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;margin-top:16px}
+.msec h2{font-family:var(--display);font-size:1.2rem;color:#fff;text-transform:uppercase;margin-bottom:12px}
+.msec h2 i{color:var(--champagne);margin-right:10px}
+.dl{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.swatches{display:flex;gap:10px;flex-wrap:wrap}
+.sw{width:110px;text-align:center;font-size:.7rem;color:var(--muted)}
+.sw i{display:block;height:56px;border-radius:12px;border:1px solid var(--line);margin-bottom:6px}
+pre.copy{background:#000;border:1px solid var(--line);border-radius:12px;padding:14px;color:#a7f3d0;font-size:.76rem;white-space:pre-wrap;margin-top:10px}
+</style>
+</head>
+<body>
+<header class="header"><nav class="nav-container">
+<a class="logo" href="index.html"><img class="brand-logo" src="img/logo-rd.svg" alt="Estúdio Rick Digital" width="38" height="38"><span class="brand-name">ESTÚDIO <b>RICK DIGITAL</b></span></a>
+<ul class="nav-menu"><li><a href="index.html#trabalhos">Trabalhos</a></li><li><a href="tecnologias.html">Tecnologias</a></li><li><a href="orcamento.html">Orçamento</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="termos.html">Termos</a></li><li><a href="index.html#contato">Contato</a></li></ul>
+<div class="nav-right"><a href="https://wa.me/5511989426415" target="_blank" class="talk-btn">Vamos conversar <i class="fa-solid fa-arrow-right"></i></a><div class="menu-toggle"><i class="fas fa-bars"></i></div></div>
+</nav></header>
+<main class="media">
+<span class="eyebrow">Uso interno da equipe</span>
+<h1>Kit de <span>mídia</span></h1>
+<p style="color:var(--muted);margin-top:10px">Tudo que o time precisa para divulgar: baixe, copie, poste — sempre com link rastreado.</p>
+<div class="msec"><h2><i class="fa-solid fa-image"></i>1 · Logo oficial</h2>
+<img src="img/logo-rd.svg" alt="Logo" width="96" style="border-radius:20px">
+<div class="dl"><a class="btn-light" href="img/logo-rd.svg" download>SVG</a><a class="btn-light" href="img/logo-rd.png" download>PNG 1024</a><a class="btn-light" href="img/logo-rd.pdf" download>PDF</a></div></div>
+<div class="msec"><h2><i class="fa-solid fa-palette"></i>2 · Cores da marca (clique para copiar)</h2>
+<div class="swatches" id="sw"></div></div>
+<div class="msec"><h2><i class="fa-solid fa-bullhorn"></i>3 · Textos prontos (com UTM)</h2>
+<pre class="copy" id="ct1">🔥 Precisa de site? O Estúdio Rick Digital entrega fanpage em 7 dias a partir de R$ 497. Portfólio: https://studiorickdigital.github.io/?utm_source=whatsapp&utm_medium=status&utm_campaign=kit_midia&utm_content=texto1 — responde EU QUERO!</pre>
+<pre class="copy">🏆 Site que vende 24h sozinho: https://studiorickdigital.github.io/?utm_source=tiktok&utm_medium=video&utm_campaign=kit_midia&utm_content=texto2 — link na bio 👆 #sitedevendas #webdesign</pre>
+<div class="dl"><button class="btn-light" style="border:none;cursor:pointer" onclick="navigator.clipboard.writeText(document.getElementById('ct1').textContent);alert('Copiado!')">Copiar texto 1</button><a class="btn-light" href="https://ricklima991.github.io/estudio-rick-digital/" target="_blank">Abrir fábrica de banners 🎨</a></div></div>
+<div class="msec"><h2><i class="fa-solid fa-list-check"></i>4 · Regras de ouro</h2>
+<p style="color:var(--muted);font-size:.86rem">1) Link do portfólio ANTES do WhatsApp · 2) Nunca poste sem UTM (troque o utm_content por texto3, video2...) · 3) Use a logo sobre fundo escuro · 4) Horários: status 12h20/20h30 · TikTok Ter 20h30/Qui 12h30/Dom 20h.</p></div>
+</main>
+<footer class="footer"><span>© 2026 Estúdio Rick Digital · Henrique Luiz Dutra.</span></footer>
+<script src="js/main.js"></script>
+<script>
+[['#0B0B10','Fundo'],['#D8C3A5','Champagne'],['#6366F1','Roxo'],['#4ADE80','Verde CTA'],['#F2EFE9','Branco']].forEach(([c,n])=>{
+const d=document.createElement('div');d.className='sw';d.innerHTML=`<i style="background:${c}"></i>${n}<br>${c}`;
+d.onclick=()=>{navigator.clipboard.writeText(c);alert(c+' copiado!');};document.getElementById('sw').appendChild(d);});
+</script>
+</body>
+</html>
