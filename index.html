@@ -31,7 +31,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU-ID"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SEU-ID');</script>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=3d1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,8 +43,26 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Rick Digital">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <style>
+      /* Critical: preloader + 3D canvas sem flash */
+      #preloader{position:fixed;inset:0;z-index:9999;background:#0B0B10;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .6s ease,visibility .6s}
+      #preloader.done{opacity:0;visibility:hidden;pointer-events:none}
+      #bg3d{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.9}
+      body{position:relative}
+      body > .header,body > main,body > footer.footer{position:relative;z-index:1}
+    </style>
 </head>
 <body>
+    <!-- PRELOADER PREMIUM -->
+    <div id="preloader" aria-hidden="true">
+      <div style="font-family:Oswald,sans-serif;letter-spacing:.35em;font-size:.75rem;color:#d8c3a5">ESTÚDIO RICK DIGITAL</div>
+      <div style="width:180px;height:2px;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden"><div id="loadbar" style="height:100%;width:0%;background:#d8c3a5;transition:width .2s"></div></div>
+      <div id="loadpct" style="font-size:.72rem;color:#8f8b84;letter-spacing:.2em">0%</div>
+    </div>
+    <canvas id="bg3d" aria-hidden="true"></canvas>
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
     <!-- NAV -->
     <header class="header">
         <nav class="nav-container">
@@ -58,21 +76,25 @@
     </header>
 
     <main>
-        <!-- HERO -->
-        <section id="inicio" class="hero">
+        <!-- HERO 3D -->
+        <section id="inicio" class="hero hero-3d">
             <div class="hero-grid">
-                <div class="hero-left">
-                    <span class="eyebrow">Estúdio Rick Digital · Experiências digitais que inspiram</span>
-                    <h1>WEB<br>DESIGNER</h1>
+                <div class="hero-left" data-hero-parallax>
+                    <span class="eyebrow reveal-text">Estúdio Rick Digital · Experiências digitais que inspiram</span>
+                    <h1 class="title-3d"><span class="line">WEB</span><br><span class="line">DESIGNER</span></h1>
                     <p class="hero-sub">Crio fanpages que convertem e sites ultraprofissionais — do layout ao código, com HTML, CSS e JavaScript.</p>
                     <div class="hero-actions">
-                        <a href="projetos.html" class="btn-light">Ver meu trabalho <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="https://github.com/Ricklima991/curr-culo" target="_blank" class="btn-line"><i class="fa-solid fa-download"></i> Ver currículo</a>
+                        <a href="projetos.html" class="btn-light magnetic" data-magnetic>Ver meu trabalho <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://github.com/Ricklima991/curr-culo" target="_blank" class="btn-line magnetic" data-magnetic><i class="fa-solid fa-download"></i> Ver currículo</a>
+                    </div>
+                    <div class="hero-badges">
+                        <span class="badge-3d">● Disponível para freelance</span>
+                        <span class="badge-3d ghost">Arraste · Passe o mouse · Explore</span>
                     </div>
                 </div>
-                <div class="hero-right">
+                <div class="hero-right tilt-stage" data-tilt-stage>
                     <!-- Janela de código: o que eu programo -->
-                    <div class="code-window animate-on-scroll">
+                    <div class="code-window animate-on-scroll tilt" data-tilt="8">
                         <div class="code-bar"><span></span><span></span><span></span><em>meu-codigo.html</em></div>
 <pre><code><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"site-dos-sonhos"</span><span class="tag">&gt;</span>
   <span class="tag">&lt;h1&gt;</span>Seu negócio no ar<span class="tag">&lt;/h1&gt;</span>
@@ -80,7 +102,7 @@
 <span class="tag">&lt;/section&gt;</span></code></pre>
                     </div>
                     <!-- Painel GitHub -->
-                    <div class="gh-panel animate-on-scroll">
+                    <div class="gh-panel animate-on-scroll tilt" data-tilt="10">
                         <div class="gh-head"><i class="fab fa-github"></i> github.com/Ricklima991</div>
                         <div class="lang-bar">
                             <span class="html" style="width:48%"></span><span class="css" style="width:32%"></span><span class="js" style="width:20%"></span>
@@ -98,7 +120,7 @@
         </section>
 
         <!-- STATS -->
-        <section class="stats reveal">
+        <section class="stats reveal tilt-none" data-counters>
             <div><i class="fa-solid fa-graduation-cap"></i><strong>2+</strong><span>Anos estudando código</span></div>
             <div><i class="fa-solid fa-rocket"></i><strong>8+</strong><span>Sites publicados</span></div>
             <div><i class="fa-solid fa-code"></i><strong>5+</strong><span>Tecnologias no toolkit</span></div>
@@ -107,22 +129,23 @@
 
         <!-- DESTAQUES -->
         <section id="trabalhos" class="work">
+            <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>PORTFÓLIO 3D • INTERATIVO • PROFISSIONAL • WEB DESIGN • FRONT-END • SEO • PERFORMANCE •&nbsp;</span><span>PORTFÓLIO 3D • INTERATIVO • PROFISSIONAL • WEB DESIGN • FRONT-END • SEO • PERFORMANCE •&nbsp;</span></div></div>
             <div class="section-head">
                 <span class="eyebrow">Trabalhos em destaque</span>
                 <a href="#todos" class="explore">Explorar todos os projetos <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="work-grid">
-                <article class="work-card animate-on-scroll">
+                <article class="work-card animate-on-scroll tilt" data-tilt="7">
                     <img src="img/viverdefreelancer.jpg" alt="Viver de Freelancer - migrado do Gamma para código 3D">
                     <div class="work-info"><h3>Viver de Freelancer</h3><small>Gamma → GitHub · 3D interativo</small></div>
                     <a class="work-go" href="https://ricklima991.github.io/viverdefreelancer/" target="_blank" aria-label="Abrir Viver de Freelancer"><i class="fa-solid fa-arrow-right"></i></a>
                 </article>
-                <article class="work-card animate-on-scroll">
+                <article class="work-card animate-on-scroll tilt" data-tilt="7">
                     <img src="img/festa-gui-leiros.png" alt="Festa das Crianças 2.0 - Gui Leiros landing 3D">
                     <div class="work-info"><h3>Festa das Crianças 2.0</h3><small>Landing 3D · Barbearia Gui Leiros</small></div>
                     <a class="work-go" href="https://ricklima991.github.io/festadascriacas2.0guileiros/" target="_blank" aria-label="Abrir Festa das Crianças"><i class="fa-solid fa-arrow-right"></i></a>
                 </article>
-                <article class="work-card animate-on-scroll">
+                <article class="work-card animate-on-scroll tilt" data-tilt="7">
                     <img src="img/vila-ema-living.jpg" alt="New Vila Ema - landing imobiliária">
                     <div class="work-info"><h3>New Vila Ema</h3><small>Landing premium · Imóveis</small></div>
                     <a class="work-go" href="https://ricklima991.github.io/vila-ema-living/" target="_blank" aria-label="Abrir New Vila Ema"><i class="fa-solid fa-arrow-right"></i></a>
@@ -142,12 +165,12 @@
             <div class="caps-left">
                 <span class="eyebrow">Capacidades principais</span>
                 <div class="cap-grid">
-                    <div class="cap animate-on-scroll"><i class="fa-solid fa-bullhorn"></i><h3>Fanpages que convertem</h3><p>Páginas diretas e persuasivas para campanhas e lançamentos.</p></div>
-                    <div class="cap animate-on-scroll"><i class="fa-solid fa-building"></i><h3>Sites institucionais</h3><p>Sites completos que passam credibilidade e geram contato.</p></div>
-                    <div class="cap animate-on-scroll"><i class="fa-solid fa-pen-ruler"></i><h3>UX/UI Design</h3><p>Layouts bonitos e fáceis de usar em qualquer tela.</p></div>
-                    <div class="cap animate-on-scroll"><i class="fa-solid fa-mobile-screen-button"></i><h3>Responsivo total</h3><p>Perfeito no celular, tablet e computador.</p></div>
-                    <div class="cap animate-on-scroll"><i class="fa-solid fa-gauge-high"></i><h3>SEO & performance</h3><p>Código otimizado para o Google achar e carregar rápido.</p></div>
-                    <div class="cap animate-on-scroll"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Atualização de sites</h3><p>Modernizo sites antigos e dou manutenção.</p></div>
+                    <div class="cap animate-on-scroll tilt" data-tilt="6"><i class="fa-solid fa-bullhorn"></i><h3>Fanpages que convertem</h3><p>Páginas diretas e persuasivas para campanhas e lançamentos.</p></div>
+                    <div class="cap animate-on-scroll tilt" data-tilt="6"><i class="fa-solid fa-building"></i><h3>Sites institucionais</h3><p>Sites completos que passam credibilidade e geram contato.</p></div>
+                    <div class="cap animate-on-scroll tilt" data-tilt="6"><i class="fa-solid fa-pen-ruler"></i><h3>UX/UI Design</h3><p>Layouts bonitos e fáceis de usar em qualquer tela.</p></div>
+                    <div class="cap animate-on-scroll tilt" data-tilt="6"><i class="fa-solid fa-mobile-screen-button"></i><h3>Responsivo total</h3><p>Perfeito no celular, tablet e computador.</p></div>
+                    <div class="cap animate-on-scroll tilt" data-tilt="6"><i class="fa-solid fa-gauge-high"></i><h3>SEO & performance</h3><p>Código otimizado para o Google achar e carregar rápido.</p></div>
+                    <div class="cap animate-on-scroll tilt" data-tilt="6"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Atualização de sites</h3><p>Modernizo sites antigos e dou manutenção.</p></div>
                 </div>
             </div>
             <div class="caps-right">
@@ -204,7 +227,7 @@
         </section>
 
         <!-- CTA -->
-        <section id="contato" class="cta reveal">
+        <section id="contato" class="cta reveal tilt" data-tilt="2">
             <div class="cta-left">
                 <h2>VAMOS CRIAR ALGO<br>EXTRAORDINÁRIO</h2>
             </div>
@@ -235,7 +258,10 @@
         </span>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/main.js?v=3d1"></script>
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

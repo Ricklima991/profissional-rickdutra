@@ -218,6 +218,45 @@ a { text-decoration: none; }
 .animate-on-scroll, .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .animate-on-scroll.animate, .reveal.in { opacity: 1; transform: none; }
 
+/* ============================================================
+   3D PREMIUM SUTIL — interativo + profissional
+   ============================================================ */
+#scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;z-index:9998;background:linear-gradient(90deg,#d8c3a5,#fff);box-shadow:0 0 12px rgba(216,195,165,.6)}
+.hero-3d{perspective:1200px}
+.title-3d .line{display:inline-block;transform-style:preserve-3d;background:linear-gradient(180deg,#fff 30%,#d8c3a5 85%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 20px 60px rgba(0,0,0,.45)}
+.hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.badge-3d{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#d8c3a5;border:1px solid rgba(216,195,165,.3);background:rgba(216,195,165,.07);backdrop-filter:blur(8px);padding:8px 14px;border-radius:999px}
+.badge-3d.ghost{color:var(--muted);border-color:var(--line);background:rgba(255,255,255,.03)}
+.tilt-stage{perspective:1100px}
+.tilt{transform-style:preserve-3d;will-change:transform;position:relative;transition:box-shadow .3s ease}
+.tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.14),transparent 45%);z-index:2}
+.tilt:hover::after{opacity:1}
+.tilt .work-info,.tilt pre,.tilt .gh-head{transform:translateZ(24px)}
+.code-window.tilt,.gh-panel.tilt{box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(216,195,165,.08)}
+.work-card.tilt:hover,.cap.tilt:hover{box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 40px rgba(216,195,165,.12)}
+.marquee{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02);margin-bottom:22px;white-space:nowrap}
+.marquee-track{display:inline-flex;animation:marquee 22s linear infinite;padding:10px 0;font-family:var(--display);font-size:.78rem;letter-spacing:.3em;color:var(--muted)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.magnetic{will-change:transform}
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9997;border-radius:50%;display:none}
+@media(pointer:fine){
+  .cursor-dot{display:block;width:6px;height:6px;background:#d8c3a5;transform:translate(-50%,-50%)}
+  .cursor-ring{display:block;width:32px;height:32px;border:1px solid rgba(216,195,165,.5);transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s,background .25s}
+  .cursor-ring.hovering{width:56px;height:56px;background:rgba(216,195,165,.1);border-color:#d8c3a5}
+}
+.all-grid a{transform-style:preserve-3d}
+.all-grid a:hover img{transform:scale(1.05)}
+.all-grid img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.btn-light,.talk-btn{position:relative;overflow:hidden}
+.btn-light::before{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn-light:hover::before{left:130%}
+@media(prefers-reduced-motion:reduce){
+  .marquee-track{animation:none}
+  .tilt,.magnetic{transform:none!important}
+  #bg3d{display:none}
+  .cursor-dot,.cursor-ring{display:none!important}
+}
+
 /* ============ RESPONSIVO ============ */
 @media (max-width: 1020px) {
   .hero-grid { grid-template-columns: 1fr; }
