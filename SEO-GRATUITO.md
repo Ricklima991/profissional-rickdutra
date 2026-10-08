@@ -3,9 +3,9 @@
 Tudo pronto no código (logo, sitemap, robots, dados estruturados). Falta dizer ao Google/Bing que você existe:
 
 ## 1 · Google Search Console (aparecer no Google)
-1. Acesse **search.google.com/search-console** → Adicionar propriedade → URL `https://studiorickdigital.github.io/`
+1. Acesse **search.google.com/search-console** → Adicionar propriedade → URL `https://rickdigitalestudio.github.io/profissional-rickdutra/`
 2. Verificação por **tag HTML**: copie o código → cole no lugar de `COLE_SEU_CODIGO_SEARCH_CONSOLE_AQUI` no `index.html` → commit + push
-3. Em **Sitemaps**, envie `https://studiorickdigital.github.io/sitemap.xml`
+3. Em **Sitemaps**, envie `https://rickdigitalestudio.github.io/profissional-rickdutra/sitemap.xml`
 4. Em 3–7 dias sua marca aparece pesquisando **"Estúdio Rick Digital"**
 
 ## 2 · Bing Webmaster (Bing + Yahoo + DuckDuckGo de graça)

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://studiorickdigital.github.io/sitemap.xml
+Sitemap: https://rickdigitalestudio.github.io/profissional-rickdutra/sitemap.xml
