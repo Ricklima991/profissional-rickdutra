@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ---------- Tilt 3D sutil (desktop apenas) ---------- */
     if (finePointer && !reduceMotion && !isMobile) {
-        document.querySelectorAll('.tilt').forEach(card => {
+        document.querySelectorAll('.tilt, .work-card, .cap, .bio-card, .all-grid a, .steps > div, .tools a span').forEach(card => {
             const max = parseFloat(card.dataset.tilt || '7');
             let raf = null;
             card.addEventListener('mousemove', (e) => {

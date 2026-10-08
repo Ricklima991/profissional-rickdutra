@@ -1,5 +1,5 @@
 /* Estúdio Rick Digital — Service Worker (funciona em qualquer domínio) */
-const CACHE = 'rick-digital-v3-3d';
+const CACHE = 'rick-digital-v4-3d-full';
 const CORE = [
   './',
   './index.html',
@@ -7,6 +7,16 @@ const CORE = [
   './projetos.html',
   './tecnologias.html',
   './termos.html',
+  './midia.html',
+  './orcamento.html',
+  './tecnologia-html.html',
+  './tecnologia-css.html',
+  './tecnologia-javascript.html',
+  './tecnologia-react.html',
+  './tecnologia-git.html',
+  './tecnologia-github.html',
+  './tecnologia-vscode.html',
+  './tecnologia-vercel.html',
   './css/style.css',
   './js/main.js',
   './manifest.webmanifest',
