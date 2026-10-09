@@ -1,5 +1,5 @@
 /* Estúdio Rick Digital — Service Worker (funciona em qualquer domínio) */
-const CACHE = 'rick-digital-v4-3d-full';
+const CACHE = 'rick-digital-v5-cards3d';
 const CORE = [
   './',
   './index.html',

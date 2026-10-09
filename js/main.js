@@ -88,26 +88,33 @@ document.addEventListener('DOMContentLoaded', () => {
         new IntersectionObserver((e, o) => { if (e[0].isIntersecting) { run(); o.disconnect(); } }, { threshold: .4 }).observe(stats);
     }
 
-    /* ---------- Tilt 3D sutil (desktop apenas) ---------- */
-    if (finePointer && !reduceMotion && !isMobile) {
-        document.querySelectorAll('.tilt, .work-card, .cap, .bio-card, .all-grid a, .steps > div, .tools a span').forEach(card => {
-            const max = parseFloat(card.dataset.tilt || '7');
-            let raf = null;
-            card.addEventListener('mousemove', (e) => {
+    /* ---------- Cards 3D interativos (todos) ---------- */
+    if (!reduceMotion) {
+        document.querySelectorAll('.tilt, .work-card, .all-grid a, .cap, .bio-card, .card, .tec-card, .pj-row, .proj, .steps > div, .tools a span').forEach(card => {
+            const max = parseFloat(card.dataset.tilt || '9');
+            let raf = null, tx = 0, ty = 0, cx = 0, cy = 0, active = false;
+            card.classList.add('card3d');
+            const render = () => {
+                cx += (tx - cx) * 0.14; cy += (ty - cy) * 0.14;
+                const done = !active && Math.abs(tx - cx) < 0.002 && Math.abs(ty - cy) < 0.002;
+                if (done) { raf = null; card.style.transform = ''; card.classList.remove('is-hover'); return; }
+                card.style.transform = `perspective(950px) rotateY(${(cx * max * 2).toFixed(2)}deg) rotateX(${(-cy * max * 2).toFixed(2)}deg) scale(${active ? 1.02 : 1})`;
+                raf = requestAnimationFrame(render);
+            };
+            const kick = () => { if (!raf) raf = requestAnimationFrame(render); };
+            card.addEventListener('pointermove', (e) => {
                 const r = card.getBoundingClientRect();
-                const px = (e.clientX - r.left) / r.width - .5;
-                const py = (e.clientY - r.top) / r.height - .5;
-                card.style.setProperty('--mx', ((px + .5) * 100) + '%');
-                card.style.setProperty('--my', ((py + .5) * 100) + '%');
-                if (raf) cancelAnimationFrame(raf);
-                raf = requestAnimationFrame(() => {
-                    card.style.transform = `perspective(900px) rotateY(${px * max * 2}deg) rotateX(${-py * max * 2}deg) translateZ(0)`;
-                });
+                if (!r.width || !r.height) return;
+                tx = (e.clientX - r.left) / r.width - 0.5;
+                ty = (e.clientY - r.top) / r.height - 0.5;
+                card.style.setProperty('--mx', ((tx + 0.5) * 100) + '%');
+                card.style.setProperty('--my', ((ty + 0.5) * 100) + '%');
+                if (!active) { active = true; card.classList.add('is-hover'); }
+                kick();
             });
-            card.addEventListener('mouseleave', () => {
-                if (raf) cancelAnimationFrame(raf);
-                card.style.transform = 'perspective(900px) rotateY(0deg) rotateX(0deg)';
-            });
+            const leave = () => { active = false; tx = 0; ty = 0; kick(); };
+            card.addEventListener('pointerleave', leave);
+            card.addEventListener('pointercancel', leave);
         });
     }
 
