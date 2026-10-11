@@ -20,6 +20,15 @@ Tudo pronto no código (logo, sitemap, robots, dados estruturados). Falta dizer 
 1. **google.com/business** → criar perfil "Estúdio Rick Digital" → categoria Web designer → link do portfólio + WhatsApp 11 98942-6415
 2. Quem buscar "criar site" na região te acha no Maps — combine com a prospecção do CRM!
 
+## 5 · Google AdSense — ganhar dinheiro com anúncios (grátis, com aprovação)
+1. **google.com/adsense** → cadastre `https://rickdigitalestudio.github.io/profissional-rickdutra/` → coloque o site no ar
+2. Quando aprovar, me mande o `ca-pub-XXXXXXXXXXXXXXXX`: eu descomento o script (já está no `<head>` das 15 páginas) e ativo os blocos
+3. Regra honesta: AdSense aprova sites com conteúdo próprio e tráfego. Para acelerar: publique 1 página nova por semana (ex: estudo de caso de cada projeto) e divulgue no TikTok/LinkedIn
+
+## 6 · Google Ads — divulgar pagando (opcional)
+1. Ads NÃO é grátis: você define R$/dia (ex: R$10/dia) e paga só por clique
+2. Comece pelo grátis acima (Search Console + Perfil da Empresa + TikTok). Anúncio pago só vale depois que o site já converte visita em WhatsApp
+
 ## Manutenção (0 custo)
 - Cada projeto novo: adicione a URL no `sitemap.xml` + peça indexação no Search Console (Inspecionar URL → Solicitar indexação)
 - Poste 1x/semana no TikTok/Status com o link do portfólio — tráfego social acelera a indexação
