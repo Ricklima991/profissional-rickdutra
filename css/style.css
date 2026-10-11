@@ -247,6 +247,19 @@ a { text-decoration: none; }
 .cta-diaria h2{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.15;color:#fff;text-transform:uppercase;letter-spacing:.02em}
 .cta-diaria p{color:var(--muted);font-size:.92rem;max-width:60ch}
 .cta-diaria .btn-light{justify-self:start;margin-top:8px}
+
+/* ============ LEADS: WhatsApp flutuante + formulário ============ */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:9000;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 12px 32px rgba(37,211,102,.45);transition:transform .25s}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:wa-pulse 2s ease-out infinite}
+@keyframes wa-pulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.5);opacity:0}}
+.lead-form{margin-top:18px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:10px}
+.lead-form strong{font-size:.85rem;color:#fff;letter-spacing:.04em}
+.lead-form input{background:#0e0e14;border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:#fff;width:100%;outline:none;font-family:var(--body);font-size:.85rem}
+.lead-form input:focus{border-color:var(--champagne)}
+.lead-form small{color:var(--muted);font-size:.72rem}
+.lead-form .lead-ok{font-size:.85rem;color:#4ade80}
+.lead-form .lead-ok a{color:var(--champagne);text-decoration:underline;cursor:pointer}
 .marquee{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02);margin-bottom:22px;white-space:nowrap}
 .marquee-track{display:inline-flex;animation:marquee 22s linear infinite;padding:10px 0;font-family:var(--display);font-size:.78rem;letter-spacing:.3em;color:var(--muted)}
 @keyframes marquee{to{transform:translateX(-50%)}}

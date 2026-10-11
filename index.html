@@ -31,7 +31,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU-ID"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SEU-ID');</script>
 
-    <link rel="stylesheet" href="css/style.css?v=3d3">
+    <link rel="stylesheet" href="css/style.css?v=3d4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -256,6 +256,15 @@
                     <button id="pwa-install" class="btn-line" style="display:none;cursor:pointer"><i class="fa-solid fa-download"></i> Instalar app</button>
                     <button id="pwa-share" class="btn-line" style="cursor:pointer"><i class="fa-solid fa-share-nodes"></i> Compartilhar</button>
                 </div>
+                <form id="lead-form" class="lead-form">
+                    <strong>Prefere que eu te chame?</strong>
+                    <input name="nome" required maxlength="60" placeholder="Seu nome" autocomplete="name">
+                    <input name="whatsapp" required maxlength="20" placeholder="Seu WhatsApp (ex: 11 99999-9999)" autocomplete="tel">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                    <button type="submit" class="btn-light" style="border:none;cursor:pointer;justify-content:center">Me chame no WhatsApp <i class="fab fa-whatsapp"></i></button>
+                    <small>Resposta em até 24h. Sem spam.</small>
+                    <p class="lead-ok" hidden>Recebido! Vou te chamar em até 24h — ou <a id="lead-wa-now" target="_blank">fale comigo agora</a>.</p>
+                </form>
             </div>
             <div class="cta-contacts">
                 <a href="mailto:henriqueluizd91@gmail.com"><i class="fa-solid fa-envelope"></i> henriqueluizd91@gmail.com</a>
@@ -278,7 +287,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="js/main.js?v=3d3"></script>
+        <a href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20or%C3%A7amento." target="_blank" class="wa-float" aria-label="Falar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <script src="js/main.js?v=3d4"></script>
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

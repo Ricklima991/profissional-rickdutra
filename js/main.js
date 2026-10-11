@@ -222,4 +222,43 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navigator.share) { try { await navigator.share(data); } catch (_) {} }
         else { try { await navigator.clipboard.writeText(data.url); alert('Link copiado!'); } catch (_) {} }
     });
+
+    /* ---------- LEADS: origem de cada clique no WhatsApp ---------- */
+    const pageTag = location.pathname.split('/').pop() || 'home';
+    document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
+        a.addEventListener('click', () => {
+            try {
+                const u = new URL(a.href);
+                const t = u.searchParams.get('text') || '';
+                if (!t.includes('(via ')) u.searchParams.set('text', (t + ` (via ${pageTag})`).trim());
+                a.href = u.toString();
+            } catch (_) {}
+        });
+    });
+
+    /* ---------- LEADS: formulário -> e-mail + WhatsApp ---------- */
+    const leadForm = document.getElementById('lead-form');
+    if (leadForm) leadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const nome = (leadForm.nome.value || '').trim();
+        const zap = (leadForm.whatsapp.value || '').trim();
+        if (!zap) return;
+        const btn = leadForm.querySelector('button[type="submit"]');
+        const ok = leadForm.querySelector('.lead-ok');
+        const now = leadForm.querySelector('#lead-wa-now');
+        const detalheEl = document.getElementById('r_detalhe');
+        const extra = detalheEl ? ' | Orcamento: ' + detalheEl.textContent : '';
+        const msg = `Olá! Sou ${nome || 'interessado'} (${zap}) — vim pelo site (via ${pageTag})${extra}. Quero conversar!`;
+        if (now) now.href = 'https://wa.me/5511989426415?text=' + encodeURIComponent(msg);
+        if (btn) { btn.disabled = true; btn.style.opacity = '.6'; }
+        try {
+            const res = await fetch('https://formsubmit.co/ajax/henriqueluizd91@gmail.com', {
+                method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ nome: nome || '-', whatsapp: zap, origem: pageTag, detalhe: extra || '-', _subject: `Novo lead do site (${pageTag}): ${nome || zap}`, _honey: leadForm._honey.value })
+            });
+            if (!res.ok) throw new Error('falha no envio');
+        } catch (_) { /* fallback: lead segue pelo WhatsApp abaixo */ }
+        if (btn) btn.style.display = 'none';
+        if (ok) ok.hidden = false;
+    });
 });
