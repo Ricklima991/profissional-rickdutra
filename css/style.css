@@ -248,6 +248,9 @@ a { text-decoration: none; }
 .cta-diaria p{color:var(--muted);font-size:.92rem;max-width:60ch}
 .cta-diaria .btn-light{justify-self:start;margin-top:8px}
 
+/* ============ Títulos 3D padrão-home em todas as páginas ============ */
+main h1:not(.title-3d){background:linear-gradient(180deg,#fff 30%,#d8c3a5 85%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 20px 60px rgba(0,0,0,.45)}
+
 /* ============ LEADS: WhatsApp flutuante + formulário ============ */
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:9000;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 12px 32px rgba(37,211,102,.45);transition:transform .25s}
 .wa-float:hover{transform:scale(1.1)}

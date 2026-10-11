@@ -204,18 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (canvas) { canvas.style.display = 'none'; }
     } catch (_) { const c = document.getElementById('bg3d'); if (c) c.style.display = 'none'; }
 
-    /* ---------- PWA install + share (mantido) ---------- */
-    let deferredPrompt = null;
-    const installBtn = document.getElementById('pwa-install');
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault(); deferredPrompt = e;
-        if (installBtn) installBtn.style.display = 'inline-flex';
-    });
-    if (installBtn) installBtn.addEventListener('click', async () => {
-        if (!deferredPrompt) return;
-        deferredPrompt.prompt(); await deferredPrompt.userChoice;
-        deferredPrompt = null; installBtn.style.display = 'none';
-    });
+    /* ---------- Compartilhar (sem instalacao de app) ---------- */
     const shareBtn = document.getElementById('pwa-share');
     if (shareBtn) shareBtn.addEventListener('click', async () => {
         const data = { title: 'Estúdio Rick Digital', text: 'Fanpages que convertem e sites ultraprofissionais — veja o portfólio:', url: location.href };
