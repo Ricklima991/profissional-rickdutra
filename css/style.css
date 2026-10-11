@@ -239,6 +239,14 @@ a { text-decoration: none; }
 .card3d .work-info,.card3d .bio-card h2,.card3d h3{transform:translateZ(28px)}
 .card3d .work-go{transform:translateZ(50px)}
 .card3d{transition:box-shadow .3s ease,border-color .3s ease}
+
+/* ============ CTA DIÁRIA (rotativa automática) ============ */
+.cta-diaria{max-width:var(--max);margin:0 auto;padding:26px 28px 0}
+.cta-diaria-inner{position:relative;overflow:hidden;background:linear-gradient(120deg,rgba(216,195,165,.12),rgba(216,195,165,.03) 55%),var(--surface);border:1px solid rgba(216,195,165,.35);border-radius:20px;padding:30px 32px;display:grid;gap:10px;box-shadow:0 20px 60px rgba(0,0,0,.45),0 0 40px rgba(216,195,165,.08)}
+.cta-diaria-inner::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#fff,#d8c3a5)}
+.cta-diaria h2{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.15;color:#fff;text-transform:uppercase;letter-spacing:.02em}
+.cta-diaria p{color:var(--muted);font-size:.92rem;max-width:60ch}
+.cta-diaria .btn-light{justify-self:start;margin-top:8px}
 .marquee{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02);margin-bottom:22px;white-space:nowrap}
 .marquee-track{display:inline-flex;animation:marquee 22s linear infinite;padding:10px 0;font-family:var(--display);font-size:.78rem;letter-spacing:.3em;color:var(--muted)}
 @keyframes marquee{to{transform:translateX(-50%)}}
